@@ -1,0 +1,110 @@
+{
+  "doc-0c21209771e004f0ecce8777547bcb33": {
+    "status": "processed",
+    "chunks_count": 38,
+    "chunks_list": [
+      "chunk-f59359f5f63e346ff50aa54bbf9d4c70",
+      "chunk-7d5aed8de10d1c64cdca8fabf6e883a4",
+      "chunk-fd9ea97698b1ea82dd5163a5d029db99",
+      "chunk-bd46bff2794626e23247db8ab0bc339d",
+      "chunk-0bc7e194d94e29fbed819241ec3b68ed",
+      "chunk-efa3896f2ca1067799c87f31a3b545b7",
+      "chunk-f1e5d3c2b4643297d9a9e2491cef5e69",
+      "chunk-4528e99fbc6fdb3e7c117258d1cc0ad9",
+      "chunk-fd203de6eae1caf60e5ea52901155885",
+      "chunk-b429ba253b0c2a7147485da1cdbdd4ec",
+      "chunk-8f90d6f716d064b002287f08e02a568d",
+      "chunk-14ef7053706f16b3a1de0d35775093a3",
+      "chunk-3bdf0af32ed01211cf03aac31ec009ed",
+      "chunk-af3f709a79e686da8c8f308e54272d4e",
+      "chunk-bf1a9fc10631c7c85390ff5633dafb02",
+      "chunk-ddb747b9a3d0a5ec0b4f4bf145ec0e40",
+      "chunk-0d5a99d04f68cf5a8a9727cae38dd18a",
+      "chunk-97c5e4a5c3f42c016ccd485b6b918572",
+      "chunk-af78d119904ba1b9ce05a2d43701fdb6",
+      "chunk-2c2d8dbc9c6e8df5f5b6170852e72dba",
+      "chunk-b461cf9cc67cea7d3d0e4ee1652aff7d",
+      "chunk-57fb9b50adbd5fdf195e1964e3499d47",
+      "chunk-1ca75a9b309fd796644b6880c8258540",
+      "chunk-ca2b5ab2768e2c03c8ec1c409e00f1dc",
+      "chunk-a6d2b64c69fddbed9caf9a3cfc08e9ba",
+      "chunk-cfe2204cb721794aacf011f313700dbf",
+      "chunk-e1a80a592b912061cb197b79f0f56285",
+      "chunk-753b5cefad84b53dff4a47b43404313c",
+      "chunk-4bf39d70cc5d41900335a7950b3eab3a",
+      "chunk-77584b71269817dd48d76a6223757434",
+      "chunk-b032e2e84416595e8c9f770c09591e70",
+      "chunk-3312eb0dd580e15fbd0552871e0b0eaa",
+      "chunk-8baa3f9c0fa7c27832c5986153343a72",
+      "chunk-61d3b56431633d2c0d132f635f2ce1f9",
+      "chunk-6f819ed4b73d01a8ef82fafa3e72c0d4",
+      "chunk-cf404c9435ab41a60c6893e02d4be694",
+      "chunk-60cb5beac44d6a9894918daae20e8b40",
+      "chunk-0980826143643e1bed9f6a941589887a"
+    ],
+    "content_summary": "--- Page 1 ---\nS No Branch Name Address 1 Address 2 Address 3 Branch Email ID District State\n1 SME PORT BLAIR MOHANPURA SBI PORT BLAIR ANDAMAN AND NICOBAR SBI.61250@SBI.CO.IN SOUTH ANDAMAN ANDAMAN AND\nBUILDING ISLAND NICOBAR\n2 RAVULAPALEM MAIN ROAD,N...",
+    "content_length": 101367,
+    "created_at": "2025-08-12T10:36:55.350711+00:00",
+    "updated_at": "2025-08-12T11:01:11.397871+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20250812_160655_fd347613",
+    "metadata": {
+      "processing_start_time": 1754995015,
+      "processing_end_time": 1754996471
+    }
+  },
+  "doc-9cd7ce999845c68ce90a0c663a27a769": {
+    "status": "processed",
+    "chunks_count": 3,
+    "chunks_list": [
+      "chunk-7b53a35d667dc078f3a99e149b96aedc",
+      "chunk-343f8d4dffa6c5f613982ed5d1e1f99d",
+      "chunk-124d963945d53dda05575d290acafd8f"
+    ],
+    "content_summary": "--- Page 1 ---\nWhat is an MSME Loan?\nMSME loans, or Micro, Small, and Medium Enterprises loans, are designed to support the growth\nand development of small businesses. These loans provide the necessary funds for business\nexpansion, operational expens...",
+    "content_length": 11096,
+    "created_at": "2025-08-12T11:01:12.571095+00:00",
+    "updated_at": "2025-08-12T11:02:28.925887+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20250812_163112_464b0f66",
+    "metadata": {
+      "processing_start_time": 1754996472,
+      "processing_end_time": 1754996548
+    }
+  },
+  "doc-aa62e9dc12a88d354ed3a0d555b970db": {
+    "status": "processed",
+    "chunks_count": 19,
+    "chunks_list": [
+      "chunk-0ba2830f585a0ee53970746bba5df265",
+      "chunk-39e08619bfccc2ecba2a31532f15dda8",
+      "chunk-c306798552b9d32b0304551b72a6eb18",
+      "chunk-eb1fb3c316d23486b726d7574f60d713",
+      "chunk-94b1ce6b6fb950381c7a51dcd9d7ea0c",
+      "chunk-9e413374e6723fd39e0c6d541bc2adcf",
+      "chunk-15d463f62d518d680bc9dfef67b764d9",
+      "chunk-8ca5dc0d65a313728bb4bc7d8087fd3a",
+      "chunk-788e269d50b219ffe4d4db8bf6be4b12",
+      "chunk-fe039050be08ea4e6ecb5312cb89bc99",
+      "chunk-da63cfb7df355ea206e52f149c71b183",
+      "chunk-ac89d8be93e3ece07c0ddb02780a8447",
+      "chunk-86f18528183f777a786fb44178ba6bdd",
+      "chunk-bf913483de4de13dff77a03075cdc489",
+      "chunk-15fc8628ed8988c240ffe5b489c0b308",
+      "chunk-4ede67cbacd81a708afce80a3de7b6fb",
+      "chunk-673cda02d7065ff85c0f661204b23e73",
+      "chunk-85283dc040d66d571c290dab3b8d7baa",
+      "chunk-3944470f95acfe2ad8ad0e4e3fd12655"
+    ],
+    "content_summary": "--- Page 1 ---\n2\n295645/2021/O/o DD(PC Division)\ne Book of Schemes\nfor\nMicro, Small and Medium Enterprises\n(MSMEs)\nOffice of the Development Commissioner (MSME)\nMinistry of Micro, Small & Medium Enterprises\nGovernment of India\nA Wing 7th Floor, Nirma...",
+    "content_length": 74999,
+    "created_at": "2025-08-12T11:02:37.901895+00:00",
+    "updated_at": "2025-08-12T11:11:23.987292+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20250812_163237_f6b78bfe",
+    "metadata": {
+      "processing_start_time": 1754996557,
+      "processing_end_time": 1754997083
+    }
+  }
+}

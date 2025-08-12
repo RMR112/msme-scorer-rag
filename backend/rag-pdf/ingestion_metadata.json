@@ -1,0 +1,564 @@
+{
+  "ingestion_session": {
+    "start_time": "2025-08-12T16:06:52.017899",
+    "total_documents": 3,
+    "documents_processed": [
+      {
+        "filename": "17032022_SME Intensive Branches.pdf",
+        "status": "success",
+        "metadata": {
+          "document_id": "17032022_sme_intensive_branches",
+          "document_name": "17032022_SME Intensive Branches.pdf",
+          "document_type": "MSME_POLICY_DOCUMENT",
+          "document_category": "LOAN_POLICY",
+          "description": "Document: 17032022_SME Intensive Branches.pdf\nType: MSME Loan Policy Document\nPages: 17\nContent Preview: --- Page 1 ---\nS No Branch Name Address 1 Address 2 Address 3 Branch Email ID District State\n1 SME PORT BLAIR MOHANPURA SBI PORT BLAIR ANDAMAN AND NICOBAR SBI. 61250@SBI. CO...",
+          "content_summary": "--- Page 1 ---\nS No Branch Name Address 1 Address 2 Address 3 Branch Email ID District State\n1 SME PORT BLAIR MOHANPURA SBI PORT BLAIR ANDAMAN AND NICOBAR SBI.61250@SBI.CO.IN SOUTH ANDAMAN ANDAMAN AND\nBUILDING ISLAND NICOBAR\n2 RAVULAPALEM MAIN ROAD,NH- DIST: EAST GODAVARI ANDHRA PRADESH sbi.02789@sbi.co.in EAST GODAVARI ANDHRA PRADESH\n5,RAVULAPALEM\n3 ANAPARTHI CANAL ROAD, ANAPARTHI EAST GODAVARI DIST ANDHRA PRADESH sbi.01409@sbi.co.in EAST GODAVARI ANDHRA PRADESH\n4 MARKET BRANCH, TUNI SURYA JAGA...",
+          "total_characters": 101367,
+          "total_words": 12960,
+          "source_file": "17032022_SME Intensive Branches.pdf",
+          "file_path": "D:\\RAJESH\\AI-Bootcamp\\DataExpert\\Scorer-MSME-RAG\\backend\\rag-pdf\\17032022_SME Intensive Branches.pdf",
+          "file_size_bytes": 749451,
+          "file_size_mb": 0.71,
+          "ingestion_date": "2025-08-12T16:06:52.017899",
+          "processing_timestamp": "2025-08-12T16:06:55.333859",
+          "total_pages": 17,
+          "page_info": [
+            {
+              "page_number": 1,
+              "text_length": 5912,
+              "has_text": true
+            },
+            {
+              "page_number": 2,
+              "text_length": 6040,
+              "has_text": true
+            },
+            {
+              "page_number": 3,
+              "text_length": 5357,
+              "has_text": true
+            },
+            {
+              "page_number": 4,
+              "text_length": 6176,
+              "has_text": true
+            },
+            {
+              "page_number": 5,
+              "text_length": 5730,
+              "has_text": true
+            },
+            {
+              "page_number": 6,
+              "text_length": 6433,
+              "has_text": true
+            },
+            {
+              "page_number": 7,
+              "text_length": 5981,
+              "has_text": true
+            },
+            {
+              "page_number": 8,
+              "text_length": 5467,
+              "has_text": true
+            },
+            {
+              "page_number": 9,
+              "text_length": 5986,
+              "has_text": true
+            },
+            {
+              "page_number": 10,
+              "text_length": 5885,
+              "has_text": true
+            },
+            {
+              "page_number": 11,
+              "text_length": 6412,
+              "has_text": true
+            },
+            {
+              "page_number": 12,
+              "text_length": 6966,
+              "has_text": true
+            },
+            {
+              "page_number": 13,
+              "text_length": 6302,
+              "has_text": true
+            },
+            {
+              "page_number": 14,
+              "text_length": 5806,
+              "has_text": true
+            },
+            {
+              "page_number": 15,
+              "text_length": 6430,
+              "has_text": true
+            },
+            {
+              "page_number": 16,
+              "text_length": 5838,
+              "has_text": true
+            },
+            {
+              "page_number": 17,
+              "text_length": 4351,
+              "has_text": true
+            }
+          ],
+          "has_content": true,
+          "business_domain": "MSME_LOANS",
+          "document_purpose": "POLICY_REFERENCE",
+          "target_audience": "LOAN_OFFICERS_MSME_APPLICANTS",
+          "search_keywords": [
+            "MSME",
+            "loan",
+            "policy",
+            "eligibility",
+            "requirements",
+            "application",
+            "approval",
+            "documentation",
+            "process"
+          ],
+          "content_topics": [
+            "loan_eligibility",
+            "application_process",
+            "documentation_requirements",
+            "approval_criteria",
+            "policy_guidelines"
+          ]
+        }
+      },
+      {
+        "filename": "MSME Loan.pdf",
+        "status": "success",
+        "metadata": {
+          "document_id": "msme_loan",
+          "document_name": "MSME Loan.pdf",
+          "document_type": "MSME_POLICY_DOCUMENT",
+          "document_category": "LOAN_POLICY",
+          "description": "Document: MSME Loan.pdf\nType: MSME Loan Policy Document\nPages: 6\nContent Preview: --- Page 1 ---\nWhat is an MSME Loan?\nMSME loans, or Micro, Small, and Medium Enterprises loans, are designed to support the growth\nand development of small businesses.  These loans provide the necessa...",
+          "content_summary": "--- Page 1 ---\nWhat is an MSME Loan?\nMSME loans, or Micro, Small, and Medium Enterprises loans, are designed to support the growth\nand development of small businesses. These loans provide the necessary funds for business\nexpansion, operational expenses, and other financial needs. The MSME stands for Micro, Small, and\nMedium Enterprises.\nMSME loans are crucial for fostering entrepreneurship and innovation, which are vital for economic\ngrowth. By providing financial assistance, MSME loans help sma...",
+          "total_characters": 11096,
+          "total_words": 1660,
+          "source_file": "MSME Loan.pdf",
+          "file_path": "D:\\RAJESH\\AI-Bootcamp\\DataExpert\\Scorer-MSME-RAG\\backend\\rag-pdf\\MSME Loan.pdf",
+          "file_size_bytes": 184207,
+          "file_size_mb": 0.18,
+          "ingestion_date": "2025-08-12T16:31:11.957718",
+          "processing_timestamp": "2025-08-12T16:31:12.570098",
+          "total_pages": 6,
+          "page_info": [
+            {
+              "page_number": 1,
+              "text_length": 2125,
+              "has_text": true
+            },
+            {
+              "page_number": 2,
+              "text_length": 1642,
+              "has_text": true
+            },
+            {
+              "page_number": 3,
+              "text_length": 1861,
+              "has_text": true
+            },
+            {
+              "page_number": 4,
+              "text_length": 2598,
+              "has_text": true
+            },
+            {
+              "page_number": 5,
+              "text_length": 2561,
+              "has_text": true
+            },
+            {
+              "page_number": 6,
+              "text_length": 209,
+              "has_text": true
+            }
+          ],
+          "has_content": true,
+          "business_domain": "MSME_LOANS",
+          "document_purpose": "POLICY_REFERENCE",
+          "target_audience": "LOAN_OFFICERS_MSME_APPLICANTS",
+          "search_keywords": [
+            "MSME",
+            "loan",
+            "policy",
+            "eligibility",
+            "requirements",
+            "application",
+            "approval",
+            "documentation",
+            "process"
+          ],
+          "content_topics": [
+            "loan_eligibility",
+            "application_process",
+            "documentation_requirements",
+            "approval_criteria",
+            "policy_guidelines"
+          ]
+        }
+      },
+      {
+        "filename": "msme_e-book_1.pdf",
+        "status": "success",
+        "metadata": {
+          "document_id": "msme_e-book_1",
+          "document_name": "msme_e-book_1.pdf",
+          "document_type": "MSME_POLICY_DOCUMENT",
+          "document_category": "LOAN_POLICY",
+          "description": "Document: msme_e-book_1.pdf\nType: MSME Loan Policy Document\nPages: 61\nContent Preview: --- Page 1 ---\n2\n295645/2021/O/o DD(PC Division)\ne Book of Schemes\nfor\nMicro, Small and Medium Enterprises\n(MSMEs)\nOffice of the Development Commissioner (MSME)\nMinistry of Micro, Small & Medium Enter...",
+          "content_summary": "--- Page 1 ---\n2\n295645/2021/O/o DD(PC Division)\ne Book of Schemes\nfor\nMicro, Small and Medium Enterprises\n(MSMEs)\nOffice of the Development Commissioner (MSME)\nMinistry of Micro, Small & Medium Enterprises\nGovernment of India\nA Wing 7th Floor, Nirman Bhawan,,\nNew Delhi-110108, PABX No-011-23063800\nWebsite: dcmsme.gov.in or msme.gov.in\nNovember 2020\n\n--- Page 2 ---\n3\n295645/2021/O/o DTD(aPCb Dilveisio no) f contents\nNew MSME Definition & Udyam Registration 03\nCredit and finance assistance scheme...",
+          "total_characters": 74999,
+          "total_words": 10571,
+          "source_file": "msme_e-book_1.pdf",
+          "file_path": "D:\\RAJESH\\AI-Bootcamp\\DataExpert\\Scorer-MSME-RAG\\backend\\rag-pdf\\msme_e-book_1.pdf",
+          "file_size_bytes": 2008636,
+          "file_size_mb": 1.92,
+          "ingestion_date": "2025-08-12T16:32:29.494387",
+          "processing_timestamp": "2025-08-12T16:32:37.901895",
+          "total_pages": 61,
+          "page_info": [
+            {
+              "page_number": 1,
+              "text_length": 336,
+              "has_text": true
+            },
+            {
+              "page_number": 2,
+              "text_length": 558,
+              "has_text": true
+            },
+            {
+              "page_number": 3,
+              "text_length": 2024,
+              "has_text": true
+            },
+            {
+              "page_number": 4,
+              "text_length": 1889,
+              "has_text": true
+            },
+            {
+              "page_number": 5,
+              "text_length": 350,
+              "has_text": true
+            },
+            {
+              "page_number": 6,
+              "text_length": 1630,
+              "has_text": true
+            },
+            {
+              "page_number": 7,
+              "text_length": 1138,
+              "has_text": true
+            },
+            {
+              "page_number": 8,
+              "text_length": 1888,
+              "has_text": true
+            },
+            {
+              "page_number": 9,
+              "text_length": 1601,
+              "has_text": true
+            },
+            {
+              "page_number": 10,
+              "text_length": 1395,
+              "has_text": true
+            },
+            {
+              "page_number": 11,
+              "text_length": 1582,
+              "has_text": true
+            },
+            {
+              "page_number": 12,
+              "text_length": 193,
+              "has_text": true
+            },
+            {
+              "page_number": 13,
+              "text_length": 1850,
+              "has_text": true
+            },
+            {
+              "page_number": 14,
+              "text_length": 1242,
+              "has_text": true
+            },
+            {
+              "page_number": 15,
+              "text_length": 378,
+              "has_text": true
+            },
+            {
+              "page_number": 16,
+              "text_length": 2195,
+              "has_text": true
+            },
+            {
+              "page_number": 17,
+              "text_length": 2543,
+              "has_text": true
+            },
+            {
+              "page_number": 18,
+              "text_length": 1983,
+              "has_text": true
+            },
+            {
+              "page_number": 19,
+              "text_length": 1110,
+              "has_text": true
+            },
+            {
+              "page_number": 20,
+              "text_length": 1244,
+              "has_text": true
+            },
+            {
+              "page_number": 21,
+              "text_length": 1871,
+              "has_text": true
+            },
+            {
+              "page_number": 22,
+              "text_length": 434,
+              "has_text": true
+            },
+            {
+              "page_number": 23,
+              "text_length": 1271,
+              "has_text": true
+            },
+            {
+              "page_number": 24,
+              "text_length": 1188,
+              "has_text": true
+            },
+            {
+              "page_number": 25,
+              "text_length": 876,
+              "has_text": true
+            },
+            {
+              "page_number": 26,
+              "text_length": 1375,
+              "has_text": true
+            },
+            {
+              "page_number": 27,
+              "text_length": 1712,
+              "has_text": true
+            },
+            {
+              "page_number": 28,
+              "text_length": 1361,
+              "has_text": true
+            },
+            {
+              "page_number": 29,
+              "text_length": 1900,
+              "has_text": true
+            },
+            {
+              "page_number": 30,
+              "text_length": 202,
+              "has_text": true
+            },
+            {
+              "page_number": 31,
+              "text_length": 1991,
+              "has_text": true
+            },
+            {
+              "page_number": 32,
+              "text_length": 1458,
+              "has_text": true
+            },
+            {
+              "page_number": 33,
+              "text_length": 1574,
+              "has_text": true
+            },
+            {
+              "page_number": 34,
+              "text_length": 1344,
+              "has_text": true
+            },
+            {
+              "page_number": 35,
+              "text_length": 1760,
+              "has_text": true
+            },
+            {
+              "page_number": 36,
+              "text_length": 242,
+              "has_text": true
+            },
+            {
+              "page_number": 37,
+              "text_length": 1891,
+              "has_text": true
+            },
+            {
+              "page_number": 38,
+              "text_length": 1810,
+              "has_text": true
+            },
+            {
+              "page_number": 39,
+              "text_length": 1015,
+              "has_text": true
+            },
+            {
+              "page_number": 40,
+              "text_length": 1394,
+              "has_text": true
+            },
+            {
+              "page_number": 41,
+              "text_length": 376,
+              "has_text": true
+            },
+            {
+              "page_number": 42,
+              "text_length": 1587,
+              "has_text": true
+            },
+            {
+              "page_number": 43,
+              "text_length": 1124,
+              "has_text": true
+            },
+            {
+              "page_number": 44,
+              "text_length": 563,
+              "has_text": true
+            },
+            {
+              "page_number": 45,
+              "text_length": 790,
+              "has_text": true
+            },
+            {
+              "page_number": 46,
+              "text_length": 621,
+              "has_text": true
+            },
+            {
+              "page_number": 47,
+              "text_length": 47,
+              "has_text": true
+            },
+            {
+              "page_number": 48,
+              "text_length": 1467,
+              "has_text": true
+            },
+            {
+              "page_number": 49,
+              "text_length": 1369,
+              "has_text": true
+            },
+            {
+              "page_number": 50,
+              "text_length": 1432,
+              "has_text": true
+            },
+            {
+              "page_number": 51,
+              "text_length": 1352,
+              "has_text": true
+            },
+            {
+              "page_number": 52,
+              "text_length": 1300,
+              "has_text": true
+            },
+            {
+              "page_number": 53,
+              "text_length": 1455,
+              "has_text": true
+            },
+            {
+              "page_number": 54,
+              "text_length": 1199,
+              "has_text": true
+            },
+            {
+              "page_number": 55,
+              "text_length": 1359,
+              "has_text": true
+            },
+            {
+              "page_number": 56,
+              "text_length": 838,
+              "has_text": true
+            },
+            {
+              "page_number": 57,
+              "text_length": 598,
+              "has_text": true
+            },
+            {
+              "page_number": 58,
+              "text_length": 763,
+              "has_text": true
+            },
+            {
+              "page_number": 59,
+              "text_length": 1155,
+              "has_text": true
+            },
+            {
+              "page_number": 60,
+              "text_length": 463,
+              "has_text": true
+            },
+            {
+              "page_number": 61,
+              "text_length": 256,
+              "has_text": true
+            }
+          ],
+          "has_content": true,
+          "business_domain": "MSME_LOANS",
+          "document_purpose": "POLICY_REFERENCE",
+          "target_audience": "LOAN_OFFICERS_MSME_APPLICANTS",
+          "search_keywords": [
+            "MSME",
+            "loan",
+            "policy",
+            "eligibility",
+            "requirements",
+            "application",
+            "approval",
+            "documentation",
+            "process"
+          ],
+          "content_topics": [
+            "loan_eligibility",
+            "application_process",
+            "documentation_requirements",
+            "approval_criteria",
+            "policy_guidelines"
+          ]
+        }
+      }
+    ],
+    "end_time": "2025-08-12T16:41:24.619643"
+  }
+}

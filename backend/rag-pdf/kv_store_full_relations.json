@@ -1,0 +1,4222 @@
+{
+  "doc-0c21209771e004f0ecce8777547bcb33": {
+    "relation_pairs": [
+      [
+        "SBI",
+        "Thirumudivakkam"
+      ],
+      [
+        "Farrukhabad",
+        "State Bank of India"
+      ],
+      [
+        "Meerut",
+        "State Bank of India"
+      ],
+      [
+        "Junagarh Road",
+        "State Bank of India"
+      ],
+      [
+        "Jammu and Kashmir",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME MANDIDEEP"
+      ],
+      [
+        "Najafgarh Road",
+        "New Delhi"
+      ],
+      [
+        "SBI",
+        "Thanjavur"
+      ],
+      [
+        "SBI",
+        "SME Branch Modasa"
+      ],
+      [
+        "Indri",
+        "Karnal"
+      ],
+      [
+        "Bharuch",
+        "SBI"
+      ],
+      [
+        "Siruthozhil Branch",
+        "State Bank of India"
+      ],
+      [
+        "Jhansi",
+        "State Bank of India"
+      ],
+      [
+        "Raigarh",
+        "SBI"
+      ],
+      [
+        "Sath Katcheri Road",
+        "State Bank of India"
+      ],
+      [
+        "Pathanamthitta",
+        "Thiruvalla"
+      ],
+      [
+        "Rishikesh",
+        "State Bank of India"
+      ],
+      [
+        "Hosur",
+        "State Bank of India"
+      ],
+      [
+        "Chandrapur",
+        "SBI"
+      ],
+      [
+        "Basti",
+        "State Bank of India"
+      ],
+      [
+        "Adilabad",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "Tekkali"
+      ],
+      [
+        "Palghar",
+        "State Bank of India"
+      ],
+      [
+        "Chandigarh",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Jind",
+        "State Bank of India"
+      ],
+      [
+        "SME Mahoba City",
+        "State Bank of India"
+      ],
+      [
+        "SBI Branch Medak",
+        "State Bank of India"
+      ],
+      [
+        "Dantewada",
+        "Kanker"
+      ],
+      [
+        "Gurgaon",
+        "State Bank of India"
+      ],
+      [
+        "KOTA",
+        "SME BRNCH JHALAWAR"
+      ],
+      [
+        "SBI Branches in Andhra Pradesh",
+        "Special SME Branch"
+      ],
+      [
+        "State Bank of India",
+        "Tumkur"
+      ],
+      [
+        "Dhamtari",
+        "SBI"
+      ],
+      [
+        "Gonda",
+        "State Bank of India"
+      ],
+      [
+        "State Bank of India",
+        "Sultanpur"
+      ],
+      [
+        "Howrah",
+        "SBI"
+      ],
+      [
+        "Amritsar",
+        "SBI"
+      ],
+      [
+        "Barmana",
+        "State Bank of India"
+      ],
+      [
+        "Patiala",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "VILE PARLE(EAST)"
+      ],
+      [
+        "Tadepalligudem Branch",
+        "West Godavari"
+      ],
+      [
+        "SBI",
+        "Tirupappuliur"
+      ],
+      [
+        "SBI Branches in Andhra Pradesh",
+        "Siripuram Junction Branch"
+      ],
+      [
+        "Basheerbagh",
+        "State Bank of India"
+      ],
+      [
+        "Karimnagar District",
+        "Kothagudem"
+      ],
+      [
+        "Indore",
+        "Sukliya Indore Branch"
+      ],
+      [
+        "Moga",
+        "SBI"
+      ],
+      [
+        "Katni",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME THODUPUZHA"
+      ],
+      [
+        "Balotra",
+        "Barmer"
+      ],
+      [
+        "Anaparthi Branch",
+        "East Godavari"
+      ],
+      [
+        "HIEMA CONVENTION CENTRE",
+        "STATE BANK OF INDIA"
+      ],
+      [
+        "Ganjam",
+        "State Bank of India"
+      ],
+      [
+        "Specialised Commercial Branch",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME Aurangabad"
+      ],
+      [
+        "S. M. E. BRANCH BHOPAL",
+        "SBI"
+      ],
+      [
+        "Haryana",
+        "Sirsa"
+      ],
+      [
+        "Haryana",
+        "Jind"
+      ],
+      [
+        "Bargarh",
+        "SBI"
+      ],
+      [
+        "COMM.BR.VASCO-DA-GAMA",
+        "SBI"
+      ],
+      [
+        "MGV Arcade",
+        "SBI Kollam"
+      ],
+      [
+        "CHANGODAR SME GAGAN RESTAURANT",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "Silchar"
+      ],
+      [
+        "Pani Tanki More Patna",
+        "SBI"
+      ],
+      [
+        "Dindigul",
+        "SBI"
+      ],
+      [
+        "Siliguri",
+        "State Bank of India"
+      ],
+      [
+        "Anand Nagar Khandwa",
+        "Khandwa Branch"
+      ],
+      [
+        "SBI",
+        "Virudhunagar"
+      ],
+      [
+        "Bobbili",
+        "SBI"
+      ],
+      [
+        "Haryana",
+        "Panipat"
+      ],
+      [
+        "Roorkee",
+        "SBI"
+      ],
+      [
+        "SME Bhubaneswar",
+        "State Bank of India"
+      ],
+      [
+        "KANDIVLI(MUMBAI)",
+        "SBI"
+      ],
+      [
+        "Firozepur",
+        "SBI"
+      ],
+      [
+        "Mahoba",
+        "State Bank of India"
+      ],
+      [
+        "AM KERALA",
+        "PANDHURNA"
+      ],
+      [
+        "Ramaji Road",
+        "SBI"
+      ],
+      [
+        "Jaipur",
+        "SME SPL BR Sitapura"
+      ],
+      [
+        "SBI",
+        "SME Dakbunglow"
+      ],
+      [
+        "SME Sagar",
+        "State Bank of India"
+      ],
+      [
+        "Anakapalle Branch",
+        "SBI Branches in Andhra Pradesh"
+      ],
+      [
+        "SME Br. Lakhimpur Kheri",
+        "State Bank of India"
+      ],
+      [
+        "State Bank of India",
+        "Yadgir"
+      ],
+      [
+        "State Bank of India",
+        "Una"
+      ],
+      [
+        "SBI",
+        "SME BRANCH SANAND"
+      ],
+      [
+        "BUNDI GURU NANAK COLONY",
+        "ILAI ROAD"
+      ],
+      [
+        "Prayagraj",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "Vadodara"
+      ],
+      [
+        "SBI",
+        "SME LAHORI GATE"
+      ],
+      [
+        "Ambala",
+        "Haryana"
+      ],
+      [
+        "Burdwan",
+        "SBI"
+      ],
+      [
+        "PONNERI",
+        "SME BRANCH"
+      ],
+      [
+        "GOREGAON EAST",
+        "SBI"
+      ],
+      [
+        "Cherthala",
+        "New Buildings"
+      ],
+      [
+        "SBI",
+        "Thane"
+      ],
+      [
+        "Palasa",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "Tinsukia Bazaar Evening Branch"
+      ],
+      [
+        "Ahmednagar",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Okhla",
+        "SBI"
+      ],
+      [
+        "State Bank of India",
+        "Sukliya Indore Branch"
+      ],
+      [
+        "Pratapgarh",
+        "State Bank of India"
+      ],
+      [
+        "Mandapeta Branch",
+        "SBI Branches in Andhra Pradesh"
+      ],
+      [
+        "Kullu",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME BRANCH NETAJI SUBHASH PLACE"
+      ],
+      [
+        "SBI",
+        "Sundargarh"
+      ],
+      [
+        "GHS ROAD JANTHA BAZAR",
+        "STATE BANK OF INDIA"
+      ],
+      [
+        "Parbhani",
+        "SBI"
+      ],
+      [
+        "SBI Branches in Andhra Pradesh",
+        "Samalkot Branch"
+      ],
+      [
+        "SBI",
+        "WORLI(SOUTH)"
+      ],
+      [
+        "Commercial Branch Fort",
+        "State Bank of India"
+      ],
+      [
+        "Haridwar",
+        "SBI"
+      ],
+      [
+        "Indrasen Tower, Mhow",
+        "Pithampur Branch"
+      ],
+      [
+        "Khammam",
+        "State Bank of India"
+      ],
+      [
+        "Haryana",
+        "Kurukshetra"
+      ],
+      [
+        "Gandhi Chowk",
+        "State Bank of India"
+      ],
+      [
+        "SBI Branch Nalgonda",
+        "State Bank of India"
+      ],
+      [
+        "Pathankot",
+        "SBI"
+      ],
+      [
+        "Rajkot",
+        "SBI"
+      ],
+      [
+        "Haldwani",
+        "Haldwani Branch"
+      ],
+      [
+        "Saharsa",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "MANDYA",
+        "STATE BANK OF INDIA"
+      ],
+      [
+        "Maharajganj",
+        "State Bank of India"
+      ],
+      [
+        "Nalanda",
+        "SBI"
+      ],
+      [
+        "Karnal",
+        "Taraori"
+      ],
+      [
+        "Kangra",
+        "State Bank of India"
+      ],
+      [
+        "Beed",
+        "SBI"
+      ],
+      [
+        "Hyderabad",
+        "State Bank of India"
+      ],
+      [
+        "SME Pratapgarh",
+        "State Bank of India"
+      ],
+      [
+        "SME Gonda",
+        "State Bank of India"
+      ],
+      [
+        "SBI Branch Saifabad",
+        "State Bank of India"
+      ],
+      [
+        "Jubilee Bhavan",
+        "SBI Kollam"
+      ],
+      [
+        "Cuddalore",
+        "SBI"
+      ],
+      [
+        "SME Waraseoni",
+        "State Bank of India"
+      ],
+      [
+        "819 SME Malda",
+        "State Bank of India"
+      ],
+      [
+        "CHINGLEPUT",
+        "SME BRANCH"
+      ],
+      [
+        "STATE BANK OF INDIA",
+        "THIRUVANANTHAPURAM"
+      ],
+      [
+        "Bahraich",
+        "State Bank of India"
+      ],
+      [
+        "Patparganj",
+        "SBI"
+      ],
+      [
+        "S.G. HIGHWAY ROAD",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "SME VYTTILA"
+      ],
+      [
+        "Raigarh",
+        "Surguja"
+      ],
+      [
+        "Ahmednagar",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "SME Branch Nagpur"
+      ],
+      [
+        "Patran",
+        "SBI"
+      ],
+      [
+        "Amravati",
+        "SBI"
+      ],
+      [
+        "Rewa",
+        "State Bank of India"
+      ],
+      [
+        "Bhiwani",
+        "Haryana"
+      ],
+      [
+        "Krishnanagar",
+        "SBI"
+      ],
+      [
+        "Adarsh Gadan Khera",
+        "State Bank of India"
+      ],
+      [
+        "Muzaffarnagar",
+        "State Bank of India"
+      ],
+      [
+        "MADANAPALLE",
+        "SBI"
+      ],
+      [
+        "Kumbakonam",
+        "SBI"
+      ],
+      [
+        "Madurai",
+        "State Bank of India"
+      ],
+      [
+        "826 Kolkata Camac Street",
+        "State Bank of India"
+      ],
+      [
+        "Bilaspur",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Jharsuguda",
+        "State Bank of India"
+      ],
+      [
+        "MYSURU",
+        "STATE BANK OF INDIA"
+      ],
+      [
+        "HP Petrol Pump",
+        "SBI"
+      ],
+      [
+        "Akbarpur",
+        "State Bank of India"
+      ],
+      [
+        "Kothagudem",
+        "State Bank of India"
+      ],
+      [
+        "Himatnagar",
+        "SBI"
+      ],
+      [
+        "Purba Medinipur",
+        "State Bank of India"
+      ],
+      [
+        "Anakapalle Branch",
+        "Visakhapatnam"
+      ],
+      [
+        "Bhavnagar",
+        "State Bank of India"
+      ],
+      [
+        "Himachal Pradesh",
+        "Kala Amb"
+      ],
+      [
+        "Macon Campus",
+        "SBI"
+      ],
+      [
+        "SPL SIB Ghatkopar",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME Paltan Bazar Branch"
+      ],
+      [
+        "Jorhat",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "SME BR ROHTAK ROAD IND COMPLEX"
+      ],
+      [
+        "Kollam",
+        "Kottayam"
+      ],
+      [
+        "State Bank of India",
+        "Vellore"
+      ],
+      [
+        "MID TOWN MAPUCA",
+        "SBI"
+      ],
+      [
+        "Bengaluru",
+        "State Bank of India"
+      ],
+      [
+        "AM KERALA",
+        "DEWAS"
+      ],
+      [
+        "Chamba",
+        "State Bank of India"
+      ],
+      [
+        "Aizawl",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Jetpur",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME BR WAZIRPUR IND ESTATE"
+      ],
+      [
+        "J.C. Road",
+        "State Bank of India"
+      ],
+      [
+        "Raipur",
+        "SBI"
+      ],
+      [
+        "Achalpur",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Imphal",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Ongole",
+        "SBI"
+      ],
+      [
+        "Shivanagar",
+        "State Bank of India"
+      ],
+      [
+        "SBI Branches in Andhra Pradesh",
+        "Tekkali Branch"
+      ],
+      [
+        "State Bank of India (SBI)",
+        "Washim"
+      ],
+      [
+        "Shahjahanpur",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "Shahdara"
+      ],
+      [
+        "SIDDIPET",
+        "SME BRANCH"
+      ],
+      [
+        "SBI",
+        "SUMEL SHOP NO.9 &10"
+      ],
+      [
+        "Ludhiana",
+        "SBI"
+      ],
+      [
+        "CUDDALORE",
+        "STATE BANK OF INDIA"
+      ],
+      [
+        "Himachal Pradesh",
+        "Taruwala"
+      ],
+      [
+        "Hoogly",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME Biharsharif"
+      ],
+      [
+        "Indore",
+        "Sajan Nagar Branch"
+      ],
+      [
+        "SBI",
+        "SME Branch Nanded"
+      ],
+      [
+        "State Bank of India",
+        "Tamluk"
+      ],
+      [
+        "Gandhidham Plot No 335",
+        "State Bank of India"
+      ],
+      [
+        "Firozabad",
+        "State Bank of India"
+      ],
+      [
+        "Hazira",
+        "SBI"
+      ],
+      [
+        "Ahmedabad",
+        "SBI"
+      ],
+      [
+        "Kalaburagi",
+        "State Bank of India"
+      ],
+      [
+        "Bell Road Jeypore",
+        "State Bank of India"
+      ],
+      [
+        "Old Gajuwaka Branch",
+        "SBI Branches in Andhra Pradesh"
+      ],
+      [
+        "NAGAPATTINAM",
+        "SME BRANCH"
+      ],
+      [
+        "BHIMAVARAM",
+        "SBI"
+      ],
+      [
+        "Mahbubnagar",
+        "State Bank of India"
+      ],
+      [
+        "820 SME Coochbihar",
+        "State Bank of India"
+      ],
+      [
+        "Rajampet",
+        "SBI"
+      ],
+      [
+        "AM KERALA",
+        "MANDIDEEP"
+      ],
+      [
+        "Dhandhari Kalan",
+        "SBI"
+      ],
+      [
+        "Kheda",
+        "SBI"
+      ],
+      [
+        "PALGHAR",
+        "SBI"
+      ],
+      [
+        "Jharsuguda",
+        "SBI"
+      ],
+      [
+        "Gondia",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Banking Services",
+        "Leo Hospital"
+      ],
+      [
+        "Bargah Canal Avenue",
+        "SBI"
+      ],
+      [
+        "Barnala",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "SME Gaya"
+      ],
+      [
+        "East Godavari",
+        "SBI Port Blair"
+      ],
+      [
+        "SBI",
+        "Sahakari Jin Branch"
+      ],
+      [
+        "Goa",
+        "SBI"
+      ],
+      [
+        "Samba",
+        "State Bank of India"
+      ],
+      [
+        "STATE BANK OF INDIA",
+        "UDUPI"
+      ],
+      [
+        "CURTI",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "Sri Potti Sriramulu"
+      ],
+      [
+        "Narsipatnam Branch",
+        "SBI Branches in Andhra Pradesh"
+      ],
+      [
+        "SBI",
+        "SME Ulubari"
+      ],
+      [
+        "Dehradun",
+        "SBI"
+      ],
+      [
+        "Kathmandi Rewari",
+        "State Bank of India"
+      ],
+      [
+        "Kollam",
+        "Kottarakara"
+      ],
+      [
+        "818 SME Branch Siliguri",
+        "State Bank of India"
+      ],
+      [
+        "KISHANGARH",
+        "KISHANGARH IND. ESTATE"
+      ],
+      [
+        "Gangtok",
+        "State Bank of India"
+      ],
+      [
+        "Jaipur",
+        "SME Branch Church Rd"
+      ],
+      [
+        "SBI Branches in Andhra Pradesh",
+        "Tanuku Branch"
+      ],
+      [
+        "Kollam State Bank Building",
+        "SBI Kollam"
+      ],
+      [
+        "SBI",
+        "SivSagar"
+      ],
+      [
+        "Himachal Pradesh",
+        "Parwanoo"
+      ],
+      [
+        "SBI",
+        "Solapur"
+      ],
+      [
+        "Gaya",
+        "SBI"
+      ],
+      [
+        "SBI Branch Peddapalli",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME Branch Aurangabad"
+      ],
+      [
+        "SBI",
+        "Tiruvallur"
+      ],
+      [
+        "AM KERALA",
+        "IDUKKI"
+      ],
+      [
+        "SME Rayagada",
+        "State Bank of India"
+      ],
+      [
+        "Ariyalur",
+        "STATE BANK OF INDIA"
+      ],
+      [
+        "SBI Branch Khamman",
+        "State Bank of India"
+      ],
+      [
+        "Mumbai",
+        "SBI"
+      ],
+      [
+        "Nanded",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "VATVA IND.ESTATE"
+      ],
+      [
+        "Jugsalai",
+        "SBI"
+      ],
+      [
+        "Kanpur Nagar",
+        "State Bank of India"
+      ],
+      [
+        "SBI Branch Sultanaabad",
+        "State Bank of India"
+      ],
+      [
+        "SATPUR INDUSTRIAL AREA(NASIK)",
+        "SBI"
+      ],
+      [
+        "Arambagh",
+        "SBI"
+      ],
+      [
+        "825 SME Branch Ballygunge",
+        "State Bank of India"
+      ],
+      [
+        "Dindigul",
+        "State Bank of India"
+      ],
+      [
+        "DOUBLE RD SARASWATHIPURAM",
+        "STATE BANK OF INDIA"
+      ],
+      [
+        "Srinagar",
+        "State Bank of India"
+      ],
+      [
+        "Bus Stand Area, Keshod",
+        "State Bank of India"
+      ],
+      [
+        "Bapatla",
+        "SBI"
+      ],
+      [
+        "Indira Market",
+        "State Bank of India"
+      ],
+      [
+        "Kollam",
+        "Punalur"
+      ],
+      [
+        "Singrauli",
+        "State Bank of India"
+      ],
+      [
+        "Bathinda",
+        "SME Bathinda"
+      ],
+      [
+        "Midnapore",
+        "SBI"
+      ],
+      [
+        "Kalaburagi",
+        "SBI"
+      ],
+      [
+        "Pujari Complex",
+        "State Bank of India"
+      ],
+      [
+        "Mirzapur",
+        "State Bank of India"
+      ],
+      [
+        "Dhule District",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Ghaziabad",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "Vaishali"
+      ],
+      [
+        "New Block Colony, Shivpuri",
+        "Shivpuri Branch"
+      ],
+      [
+        "SBI",
+        "Villupuram"
+      ],
+      [
+        "SME Moti Mahal Lucknow",
+        "State Bank of India"
+      ],
+      [
+        "Gujarat",
+        "SBI"
+      ],
+      [
+        "Deoghar",
+        "State Bank of India"
+      ],
+      [
+        "State Bank of India",
+        "Tirupur"
+      ],
+      [
+        "Rupnagar",
+        "SBI"
+      ],
+      [
+        "Korba",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Alappuzha",
+        "Cherthala"
+      ],
+      [
+        "SBI",
+        "SME ALAPPUZHA"
+      ],
+      [
+        "Kalyani",
+        "SBI"
+      ],
+      [
+        "Nagpur District",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "State Bank of India",
+        "Vikarabad"
+      ],
+      [
+        "Nashik",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "816 SME EXIM Branch",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME Kankarbagh"
+      ],
+      [
+        "State Bank of India",
+        "Udhampur"
+      ],
+      [
+        "821 SME Branch Rajibpur",
+        "State Bank of India"
+      ],
+      [
+        "Haryana",
+        "Panchkula"
+      ],
+      [
+        "Srikakulam",
+        "Tekkali Branch"
+      ],
+      [
+        "SBI",
+        "SME BRANCH DEWAS"
+      ],
+      [
+        "Old Gajuwaka Branch",
+        "Visakhapatnam"
+      ],
+      [
+        "Chirala",
+        "SBI"
+      ],
+      [
+        "Faridabad",
+        "State Bank of India"
+      ],
+      [
+        "Dhule",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Gandhi Marg",
+        "State Bank of India"
+      ],
+      [
+        "Badasankha Puri",
+        "State Bank of India"
+      ],
+      [
+        "Nagaon",
+        "SBI"
+      ],
+      [
+        "MSME Nellore",
+        "SBI"
+      ],
+      [
+        "State Bank of India",
+        "Thane"
+      ],
+      [
+        "Sendhwa Branch",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME Branch Nasik"
+      ],
+      [
+        "BELGAUM",
+        "STATE BANK OF INDIA"
+      ],
+      [
+        "Nagaland",
+        "State Bank of India"
+      ],
+      [
+        "BANDIPALYA",
+        "MYSURU"
+      ],
+      [
+        "Dimapur District",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Hardoi",
+        "State Bank of India"
+      ],
+      [
+        "Haridwar",
+        "State Bank of India"
+      ],
+      [
+        "Gauribidanur",
+        "State Bank of India"
+      ],
+      [
+        "Agartala",
+        "State Bank of India"
+      ],
+      [
+        "Deoria",
+        "State Bank of India"
+      ],
+      [
+        "Haldwani",
+        "SBI"
+      ],
+      [
+        "Kota",
+        "Kota Kum Samiti Complex"
+      ],
+      [
+        "New Delhi",
+        "SBI"
+      ],
+      [
+        "Medak",
+        "State Bank of India"
+      ],
+      [
+        "Junagadh Dist: Junagadh",
+        "State Bank of India"
+      ],
+      [
+        "Aligarh",
+        "State Bank of India"
+      ],
+      [
+        "Madhubani",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Kamrup Metro",
+        "SBI"
+      ],
+      [
+        "Patna",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "813 SME Branch",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "Sangli"
+      ],
+      [
+        "Ambattur",
+        "State Bank of India"
+      ],
+      [
+        "SBI Branches in Andhra Pradesh",
+        "Tadepalligudem Branch"
+      ],
+      [
+        "Haryana",
+        "Karnal"
+      ],
+      [
+        "SBI",
+        "SME Branch Palanpur"
+      ],
+      [
+        "Barabanki",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME SADAR BAZAR"
+      ],
+      [
+        "Kanauj",
+        "State Bank of India"
+      ],
+      [
+        "BILIYA INDUSTRIAL AREA",
+        "Bhilwara"
+      ],
+      [
+        "SBI Babra Jeevanpara",
+        "State Bank of India"
+      ],
+      [
+        "K N Complex, Near Bharat Beheramal",
+        "SBI"
+      ],
+      [
+        "Chennai",
+        "State Bank of India"
+      ],
+      [
+        "State Bank of India",
+        "Tamil Nadu"
+      ],
+      [
+        "State Bank of India",
+        "Tuticorin"
+      ],
+      [
+        "SBI",
+        "Salt Lake"
+      ],
+      [
+        "SBI",
+        "SME Jorhat Bazar"
+      ],
+      [
+        "Sagar",
+        "State Bank of India"
+      ],
+      [
+        "Begusarai",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "SME Ara"
+      ],
+      [
+        "Samastipur",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Mehsana",
+        "SBI"
+      ],
+      [
+        "Koraput",
+        "State Bank of India"
+      ],
+      [
+        "SBI Branches in Andhra Pradesh",
+        "Vizianagaram Branch"
+      ],
+      [
+        "Dhule",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "Tezpur"
+      ],
+      [
+        "SBI",
+        "Surat"
+      ],
+      [
+        "Asaf Ali Road",
+        "New Delhi"
+      ],
+      [
+        "Bhilwara",
+        "Hanumangarh"
+      ],
+      [
+        "815 SME - N.S. Road Branch",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME MAYAPURI"
+      ],
+      [
+        "Chennai",
+        "Tamil Nadu"
+      ],
+      [
+        "Kushinagar",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "Surat Business Centre"
+      ],
+      [
+        "SBI",
+        "SME Samastipur"
+      ],
+      [
+        "Erode",
+        "SBI"
+      ],
+      [
+        "Darbhanga",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "SBI",
+        "Yavatmal"
+      ],
+      [
+        "Botad",
+        "SBI"
+      ],
+      [
+        "Haryana",
+        "Yamuna Nagar"
+      ],
+      [
+        "Rayagada",
+        "State Bank of India"
+      ],
+      [
+        "Cuttack",
+        "State Bank of India"
+      ],
+      [
+        "Golaghat",
+        "SBI"
+      ],
+      [
+        "R-Block Patna",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "Surendranagar"
+      ],
+      [
+        "Jalandhar",
+        "SBI"
+      ],
+      [
+        "Sant Ravidas Nagar",
+        "State Bank of India"
+      ],
+      [
+        "Lucknow",
+        "State Bank of India"
+      ],
+      [
+        "Malakapur",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Muzaffarpur",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Patna",
+        "SBI"
+      ],
+      [
+        "Bokaro Steel City",
+        "SBI"
+      ],
+      [
+        "Balaghat",
+        "State Bank of India"
+      ],
+      [
+        "ANDHERI EAST",
+        "SBI"
+      ],
+      [
+        "Bareilly",
+        "State Bank of India"
+      ],
+      [
+        "Natunganj",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "Sangrur"
+      ],
+      [
+        "Guntur",
+        "SBI"
+      ],
+      [
+        "SHIVAMOGGA",
+        "STATE BANK OF INDIA"
+      ],
+      [
+        "DECCAN GYMKHANA(PUNE)",
+        "SBI"
+      ],
+      [
+        "HASSAN",
+        "STATE BANK OF INDIA"
+      ],
+      [
+        "Baroda",
+        "SBI"
+      ],
+      [
+        "Bahadurgarh",
+        "Haryana"
+      ],
+      [
+        "Ujjain Branch",
+        "Varuchi Marg Ujjain"
+      ],
+      [
+        "Chirang",
+        "SBI"
+      ],
+      [
+        "Etawah",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME PERUMBAVOOR"
+      ],
+      [
+        "Gadarwara",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "Tirunelveli"
+      ],
+      [
+        "Chhatarpur Branch",
+        "Jawahar Marg Chhatarpur"
+      ],
+      [
+        "Chhattisgarh",
+        "SBI"
+      ],
+      [
+        "Hamirpur",
+        "State Bank of India"
+      ],
+      [
+        "East Godavari",
+        "Samalkot Branch"
+      ],
+      [
+        "SBI",
+        "SME SEHORE"
+      ],
+      [
+        "SME Branch Backbay Reclamation",
+        "State Bank of India"
+      ],
+      [
+        "BRIGADE DOMBIVLI EAST",
+        "SBI"
+      ],
+      [
+        "Siripuram Junction Branch",
+        "Visakhapatnam"
+      ],
+      [
+        "SBI",
+        "Suleiman"
+      ],
+      [
+        "SME Cuttack",
+        "State Bank of India"
+      ],
+      [
+        "Itanagar",
+        "SBI"
+      ],
+      [
+        "Parackal Buildings",
+        "SBI Kollam"
+      ],
+      [
+        "Mahalaxmi Towers",
+        "Thrissur State Bank"
+      ],
+      [
+        "Pudukkottai",
+        "SBI"
+      ],
+      [
+        "KATYAYANI MAHAMAYA COMPLEX",
+        "STATE BANK OF INDIA"
+      ],
+      [
+        "Rishikesh",
+        "Rudrapur Branch"
+      ],
+      [
+        "SBI",
+        "SME ASAF ALI ROAD"
+      ],
+      [
+        "STATE BANK OF INDIA",
+        "VISHWAMANAVA DIST"
+      ],
+      [
+        "Kantabanji Bazar",
+        "SBI"
+      ],
+      [
+        "Rani Gunj",
+        "State Bank of India"
+      ],
+      [
+        "SBI Kollam",
+        "Santosh & Raj Building"
+      ],
+      [
+        "SBI",
+        "Shivshakti Honda"
+      ],
+      [
+        "Bilaspur",
+        "State Bank of India"
+      ],
+      [
+        "Amalapuram Branch",
+        "SBI Branches in Andhra Pradesh"
+      ],
+      [
+        "Friends Arcade",
+        "State Bank of India"
+      ],
+      [
+        "Narasaropet",
+        "SBI"
+      ],
+      [
+        "Dhanbad",
+        "SBI"
+      ],
+      [
+        "AM KERALA",
+        "INDORE"
+      ],
+      [
+        "KALPAKKAM",
+        "SME BRANCH"
+      ],
+      [
+        "Karimnagar District",
+        "State Bank of India"
+      ],
+      [
+        "Biswanath",
+        "SBI"
+      ],
+      [
+        "Kutch",
+        "State Bank of India"
+      ],
+      [
+        "M.G. Road",
+        "State Bank of India"
+      ],
+      [
+        "SME Barabanki",
+        "State Bank of India"
+      ],
+      [
+        "PALAKOL",
+        "SBI"
+      ],
+      [
+        "Palwal",
+        "State Bank of India"
+      ],
+      [
+        "Doranda",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "SME Branch Ahmednagar"
+      ],
+      [
+        "Fatehabad",
+        "Haryana"
+      ],
+      [
+        "KARNATAKA",
+        "STATE BANK OF INDIA"
+      ],
+      [
+        "SBI Branch Yellareddyguda",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME Branch Dibrugarh"
+      ],
+      [
+        "Betiah",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "SBI",
+        "SME PIPARIYA"
+      ],
+      [
+        "Lucknow",
+        "SBI"
+      ],
+      [
+        "AGI - SUPERMARKET KALABURAGI KARNATAKA",
+        "Kalaburagi"
+      ],
+      [
+        "Thrissur",
+        "Wadakkancherry"
+      ],
+      [
+        "Aurangabad",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "State Bank of India",
+        "Tiruppur"
+      ],
+      [
+        "Khargone Branch",
+        "Nutan Nagar Khargone"
+      ],
+      [
+        "Adityapur",
+        "SBI"
+      ],
+      [
+        "Bhilai",
+        "Durg"
+      ],
+      [
+        "Banking Services",
+        "Changanassery Industrial Estate"
+      ],
+      [
+        "Puri",
+        "State Bank of India"
+      ],
+      [
+        "Kangeyam",
+        "SBI"
+      ],
+      [
+        "AM KERALA",
+        "SEHORE"
+      ],
+      [
+        "SBI",
+        "Vishakhapatnam"
+      ],
+      [
+        "COMMERCIAL BRANCH PANAJI",
+        "SBI"
+      ],
+      [
+        "Karimnagar",
+        "State Bank of India"
+      ],
+      [
+        "SME Fatehpur",
+        "State Bank of India"
+      ],
+      [
+        "Jharkhand",
+        "State Bank of India"
+      ],
+      [
+        "SME Br. Civil Lines, Allahabad",
+        "State Bank of India"
+      ],
+      [
+        "Bhagalpur",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "SBI",
+        "Tower Chowk"
+      ],
+      [
+        "Paramekkavu",
+        "Thrissur State Bank"
+      ],
+      [
+        "Chapra",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "SBI",
+        "SME CHERTHALA"
+      ],
+      [
+        "SME Branch Satna",
+        "State Bank of India"
+      ],
+      [
+        "Barpeta",
+        "SBI"
+      ],
+      [
+        "GIDC Wadhwan",
+        "SBI"
+      ],
+      [
+        "Ramachandrapuram Branch",
+        "SBI Branches in Andhra Pradesh"
+      ],
+      [
+        "Karaikudi",
+        "SBI"
+      ],
+      [
+        "Kharsia",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Mumbai",
+        "State Bank of India"
+      ],
+      [
+        "Shillong",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Khel Prashal Branch",
+        "State Bank of India"
+      ],
+      [
+        "Jharsuguda Station",
+        "SBI"
+      ],
+      [
+        "Pilibhit",
+        "State Bank of India"
+      ],
+      [
+        "KOLLAM",
+        "STATE BANK OF INDIA"
+      ],
+      [
+        "Barmer",
+        "Jodhpur"
+      ],
+      [
+        "SME Br., Ind Est., KNP",
+        "State Bank of India"
+      ],
+      [
+        "Chittoor",
+        "SBI"
+      ],
+      [
+        "Ranchi",
+        "SBI"
+      ],
+      [
+        "Kancheepuram",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "SME MUVATTUPUZHA"
+      ],
+      [
+        "Pune",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "Satara"
+      ],
+      [
+        "Gandhidham",
+        "State Bank of India"
+      ],
+      [
+        "Ahmedabad",
+        "Dhrangadhra"
+      ],
+      [
+        "Shimla",
+        "State Bank of India"
+      ],
+      [
+        "Etah",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME TOWN HALL"
+      ],
+      [
+        "Koraput State",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Chilakaluripeta",
+        "SBI"
+      ],
+      [
+        "SBI Branch Suryapet",
+        "State Bank of India"
+      ],
+      [
+        "Kashipur",
+        "SBI"
+      ],
+      [
+        "Kutch",
+        "SBI"
+      ],
+      [
+        "IPICOL House",
+        "State Bank of India"
+      ],
+      [
+        "Govind Mitra Road",
+        "SBI"
+      ],
+      [
+        "SBI Administrative Office",
+        "State Bank of India"
+      ],
+      [
+        "Gorakhpur",
+        "State Bank of India"
+      ],
+      [
+        "Aurangabad",
+        "SBI"
+      ],
+      [
+        "Purnea",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "SBI",
+        "SME KALAMASSERY\"<|various\"creditriskmanagement"
+      ],
+      [
+        "Indore",
+        "Sendhwa Branch"
+      ],
+      [
+        "814 SME Tamluk Railway Station",
+        "State Bank of India"
+      ],
+      [
+        "State Bank of India",
+        "Varanasi"
+      ],
+      [
+        "SBI",
+        "SME Branch"
+      ],
+      [
+        "SBI",
+        "SME Branch Amravati"
+      ],
+      [
+        "State Bank of India",
+        "Warangal"
+      ],
+      [
+        "BHPV Branch",
+        "SBI Branches in Andhra Pradesh"
+      ],
+      [
+        "Kozhikode",
+        "Niyaz Building"
+      ],
+      [
+        "Saharanpur",
+        "State Bank of India"
+      ],
+      [
+        "Latur",
+        "SBI"
+      ],
+      [
+        "Kozhikode",
+        "Thrissur"
+      ],
+      [
+        "827 SME Branch New Alipore",
+        "State Bank of India"
+      ],
+      [
+        "Agra",
+        "State Bank of India"
+      ],
+      [
+        "Rampur (SME Rampur 63745)",
+        "State Bank of India"
+      ],
+      [
+        "SME Br., Ashok Ng., KNP",
+        "State Bank of India"
+      ],
+      [
+        "Kargil Chowk",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "SME KAKKANAD"
+      ],
+      [
+        "Asansol",
+        "SBI"
+      ],
+      [
+        "ANANTAPUR",
+        "SBI"
+      ],
+      [
+        "Jamnagar",
+        "SBI"
+      ],
+      [
+        "Mandi District",
+        "State Bank of India"
+      ],
+      [
+        "Ramgarh",
+        "SBI"
+      ],
+      [
+        "Byasanagar",
+        "State Bank of India"
+      ],
+      [
+        "Junagadh",
+        "State Bank of India"
+      ],
+      [
+        "Durgapur",
+        "SBI"
+      ],
+      [
+        "Guna Branch",
+        "Mahuwa Mills Gopalpura"
+      ],
+      [
+        "Hazaribagh",
+        "State Bank of India"
+      ],
+      [
+        "Bolangir",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "SME NAJAFGARH ROAD"
+      ],
+      [
+        "Fatehgarh Sahib",
+        "SBI"
+      ],
+      [
+        "Lakhisarai",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "SME Branch Chhatral"
+      ],
+      [
+        "823 SME Hillcart Road",
+        "State Bank of India"
+      ],
+      [
+        "Purnea",
+        "SBI"
+      ],
+      [
+        "AM KERALA",
+        "PIPARIYA"
+      ],
+      [
+        "HAVERI",
+        "STATE BANK OF INDIA"
+      ],
+      [
+        "Parwanoo",
+        "State Bank of India"
+      ],
+      [
+        "N.H.-7, Kutchery Road Seoni",
+        "Seoni Branch"
+      ],
+      [
+        "Peddapalli",
+        "State Bank of India"
+      ],
+      [
+        "SBI Branch Miryalaguda",
+        "State Bank of India"
+      ],
+      [
+        "Seoni",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME Branch Parbhani"
+      ],
+      [
+        "Pondicherry",
+        "SBI"
+      ],
+      [
+        "Kovilpatti",
+        "SBI"
+      ],
+      [
+        "Namakkal",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME Branch Chandrapur"
+      ],
+      [
+        "State Bank of India",
+        "Talcher Bazar"
+      ],
+      [
+        "Dobaspete",
+        "State Bank of India"
+      ],
+      [
+        "Pakur",
+        "State Bank of India"
+      ],
+      [
+        "AJMER",
+        "MADAN GANJ KISHANGARH"
+      ],
+      [
+        "Jammu",
+        "State Bank of India"
+      ],
+      [
+        "Solan",
+        "State Bank of India"
+      ],
+      [
+        "Nasik",
+        "SBI"
+      ],
+      [
+        "Himachal Pradesh",
+        "Mehatpur"
+      ],
+      [
+        "Fatehpur",
+        "State Bank of India"
+      ],
+      [
+        "Dimapur",
+        "State Bank of India"
+      ],
+      [
+        "Dibrugarh",
+        "SBI"
+      ],
+      [
+        "SBI Branches in Andhra Pradesh",
+        "Suryabagh Branch"
+      ],
+      [
+        "Haryana",
+        "Hisar"
+      ],
+      [
+        "SBI",
+        "Srikakulam"
+      ],
+      [
+        "Jagannathpara Main Road",
+        "State Bank of India"
+      ],
+      [
+        "Barmer",
+        "Pali"
+      ],
+      [
+        "Malda",
+        "State Bank of India"
+      ],
+      [
+        "Haldia",
+        "SBI"
+      ],
+      [
+        "Godda",
+        "SBI"
+      ],
+      [
+        "SME BR., Transport Nagar, LKO",
+        "State Bank of India"
+      ],
+      [
+        "Dimapur",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Nalgonda",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "Tiruvannamalai"
+      ],
+      [
+        "BARELI",
+        "SBI"
+      ],
+      [
+        "Bokaro Steel City",
+        "State Bank of India"
+      ],
+      [
+        "SME Kumarapark",
+        "State Bank of India"
+      ],
+      [
+        "Royal Mall",
+        "SBI Kollam"
+      ],
+      [
+        "SBI",
+        "SME Branch Latur"
+      ],
+      [
+        "State Bank of India",
+        "Wanaparthy"
+      ],
+      [
+        "SBI",
+        "Suri"
+      ],
+      [
+        "Odisha",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME MAVELIKKARA"
+      ],
+      [
+        "SME RATH",
+        "State Bank of India"
+      ],
+      [
+        "ELURU",
+        "RR PET BRANCH"
+      ],
+      [
+        "SPECIALIZED SME BRANCH UDAIPUR",
+        "Udaipur"
+      ],
+      [
+        "Chengalpattu",
+        "SBI"
+      ],
+      [
+        "Belghoria",
+        "SBI"
+      ],
+      [
+        "East Godavari",
+        "Ravulapalem Branch"
+      ],
+      [
+        "S C F No 42-D HUDA Complex",
+        "State Bank of India"
+      ],
+      [
+        "Narayana Trade Centre",
+        "SBI Kollam"
+      ],
+      [
+        "Khel Prashal Branch",
+        "Khel Prashal Race Course Road"
+      ],
+      [
+        "Kollam",
+        "Palakkad"
+      ],
+      [
+        "SBI Branch Kamareddy",
+        "State Bank of India"
+      ],
+      [
+        "Dakshin Dinajpur",
+        "State Bank of India"
+      ],
+      [
+        "Mitra Niwas Road Ratlam",
+        "Ratlam Branch"
+      ],
+      [
+        "NARODA INDUSTRIAL ESTATE",
+        "SBI"
+      ],
+      [
+        "822 SME Raiganj",
+        "State Bank of India"
+      ],
+      [
+        "Kanpur",
+        "State Bank of India"
+      ],
+      [
+        "Kolar",
+        "State Bank of India"
+      ],
+      [
+        "Nagpur",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Rampur",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME Branch North Lakhimpur"
+      ],
+      [
+        "Rajahmundry Branch",
+        "SBI Branches in Andhra Pradesh"
+      ],
+      [
+        "Bodeli",
+        "SBI"
+      ],
+      [
+        "Kanyakumari",
+        "SBI"
+      ],
+      [
+        "Noida",
+        "State Bank of India"
+      ],
+      [
+        "SME Sitapur",
+        "State Bank of India"
+      ],
+      [
+        "Barmana",
+        "Himachal Pradesh"
+      ],
+      [
+        "Bijapur",
+        "State Bank of India"
+      ],
+      [
+        "Jagtial",
+        "State Bank of India"
+      ],
+      [
+        "State Bank of India",
+        "Suryapet"
+      ],
+      [
+        "Mayurbhanj",
+        "State Bank of India"
+      ],
+      [
+        "Chandni Chowk",
+        "New Delhi"
+      ],
+      [
+        "Dhanbad",
+        "State Bank of India"
+      ],
+      [
+        "Chhota Udepur",
+        "SBI"
+      ],
+      [
+        "F M Square Subhra Plaza",
+        "State Bank of India"
+      ],
+      [
+        "CUDDALORE",
+        "SME BRANCH"
+      ],
+      [
+        "SBI",
+        "SME Branch Akola"
+      ],
+      [
+        "Kottayam",
+        "Matha Complex"
+      ],
+      [
+        "NAGAPATTINAM",
+        "STATE BANK OF INDIA"
+      ],
+      [
+        "Jaipur",
+        "SME Branch Jaipur South"
+      ],
+      [
+        "Akola",
+        "SBI"
+      ],
+      [
+        "M. P. NAGAR BHOPAL",
+        "SBI"
+      ],
+      [
+        "SME Sultanpur",
+        "State Bank of India"
+      ],
+      [
+        "Sajan Nagar Branch",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME Branch Beed"
+      ],
+      [
+        "Gandhinagar",
+        "SBI"
+      ],
+      [
+        "State Bank of India",
+        "Tiruchirapalli"
+      ],
+      [
+        "Jangaon",
+        "State Bank of India"
+      ],
+      [
+        "Mehatpur",
+        "State Bank of India"
+      ],
+      [
+        "Panchmahal",
+        "SBI"
+      ],
+      [
+        "Khanapara",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "824 Overseas Branch Kolkata",
+        "State Bank of India"
+      ],
+      [
+        "Chaibasa",
+        "SBI"
+      ],
+      [
+        "Rishikesh",
+        "SBI"
+      ],
+      [
+        "MANGALORE",
+        "STATE BANK OF INDIA"
+      ],
+      [
+        "City Centre, Zonal Office Gwalior",
+        "Gwalior Branch"
+      ],
+      [
+        "Kollam",
+        "Thrissur"
+      ],
+      [
+        "State Bank of India (SBI)",
+        "Wardha"
+      ],
+      [
+        "Andhra Pradesh",
+        "SBI"
+      ],
+      [
+        "Porbandar",
+        "State Bank of India"
+      ],
+      [
+        "Odisha",
+        "SBI"
+      ],
+      [
+        "SME Rewa",
+        "State Bank of India"
+      ],
+      [
+        "Gagret",
+        "Himachal Pradesh"
+      ],
+      [
+        "SBI",
+        "SCB Ahmedabad"
+      ],
+      [
+        "SBI",
+        "SME Law Garden Branch"
+      ],
+      [
+        "Dahod",
+        "SBI"
+      ],
+      [
+        "Avenue Road",
+        "State Bank of India"
+      ],
+      [
+        "Chandernagore",
+        "State Bank of India"
+      ],
+      [
+        "Kolhapur",
+        "SBI"
+      ],
+      [
+        "Katiar",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Azamgarh",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME Boring Road"
+      ],
+      [
+        "Dilsukhnagar",
+        "State Bank of India"
+      ],
+      [
+        "Raghav Nagar",
+        "State Bank of India"
+      ],
+      [
+        "Nagpur",
+        "SBI"
+      ],
+      [
+        "MALAD(WEST)",
+        "SBI"
+      ],
+      [
+        "GANNAVARAM G T ROAD",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "SME Yavatmal"
+      ],
+      [
+        "Laghu Udyog Branch",
+        "SBI"
+      ],
+      [
+        "Rudrapur",
+        "SBI"
+      ],
+      [
+        "KOTAH INDUSTRIAL ESTATE",
+        "R K MARBLES P LTD."
+      ],
+      [
+        "Kanker",
+        "SBI"
+      ],
+      [
+        "State Bank of India",
+        "Unnao"
+      ],
+      [
+        "Bhubaneswar",
+        "State Bank of India"
+      ],
+      [
+        "Cheerakathil Complex",
+        "Thrissur State Bank"
+      ],
+      [
+        "SBI",
+        "SME BR AJMAL KHAN ROAD"
+      ],
+      [
+        "SBI",
+        "SME Sivsagar Bazar"
+      ],
+      [
+        "CUDDAPAH",
+        "SBI"
+      ],
+      [
+        "Kathmandi",
+        "State Bank of India"
+      ],
+      [
+        "Bijapur",
+        "SBI"
+      ],
+      [
+        "Joda Main Road",
+        "State Bank of India"
+      ],
+      [
+        "KERALA",
+        "STATE BANK OF INDIA"
+      ],
+      [
+        "SBI",
+        "Vizianagaram"
+      ],
+      [
+        "SBI Rania Bazar",
+        "State Bank of India"
+      ],
+      [
+        "SME Rajajinagar",
+        "State Bank of India"
+      ],
+      [
+        "AM KERALA",
+        "ERNAKULAM"
+      ],
+      [
+        "Kathua",
+        "State Bank of India"
+      ],
+      [
+        "Dondaparthi Branch",
+        "SBI Branches in Andhra Pradesh"
+      ],
+      [
+        "Kalahandi",
+        "State Bank of India"
+      ],
+      [
+        "Gurudas Pur",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "Vijayawada"
+      ],
+      [
+        "JANGAREDDYGUDEM",
+        "SBI"
+      ],
+      [
+        "Nellore",
+        "SBI"
+      ],
+      [
+        "KURNOOL",
+        "SBI"
+      ],
+      [
+        "INDUSTRIAL ESTATE(SANGLI)",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "WEST GODAVARI"
+      ],
+      [
+        "Malappuram",
+        "New Buildings"
+      ],
+      [
+        "S.S.I. Finance Sajan Navlakha",
+        "Sajan Nagar Branch"
+      ],
+      [
+        "Jayankondacholapuram",
+        "SBI"
+      ],
+      [
+        "Aska Road",
+        "State Bank of India"
+      ],
+      [
+        "SAKINAKA",
+        "SBI"
+      ],
+      [
+        "Dumka",
+        "SBI"
+      ],
+      [
+        "HYDERABAD",
+        "STATE BANK OF INDIA"
+      ],
+      [
+        "Bhata Para",
+        "SBI"
+      ],
+      [
+        "Ravulapalem Branch",
+        "SBI Branches in Andhra Pradesh"
+      ],
+      [
+        "Indore Plot No-1, Sector-F, Sanwer",
+        "Sukliya Indore Branch"
+      ],
+      [
+        "Raebareli",
+        "State Bank of India"
+      ],
+      [
+        "Jaunpur",
+        "State Bank of India"
+      ],
+      [
+        "Vizianagaram",
+        "Vizianagaram Branch"
+      ],
+      [
+        "Balaghat Branch",
+        "SME Ward No 14 Balaghat"
+      ],
+      [
+        "AM KERALA",
+        "BHOPAL"
+      ],
+      [
+        "State Bank of India",
+        "Telangana"
+      ],
+      [
+        "Coimbatore",
+        "State Bank of India"
+      ],
+      [
+        "Anand",
+        "SBI"
+      ],
+      [
+        "Ambikapur",
+        "SBI"
+      ],
+      [
+        "Ashok Nagar Branch",
+        "Vidisha Road Ashok Nagar"
+      ],
+      [
+        "Kargil Chowk",
+        "State Bank of India"
+      ],
+      [
+        "Berhampore",
+        "SBI"
+      ],
+      [
+        "Khamgaon",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Ahmednagar District",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Moradabad",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME Sasaram"
+      ],
+      [
+        "817 SME Park Street",
+        "State Bank of India"
+      ],
+      [
+        "BORIVAL(WEST)",
+        "SBI"
+      ],
+      [
+        "Alwar",
+        "SME Arya Nagar Branch"
+      ],
+      [
+        "Amreli",
+        "State Bank of India"
+      ],
+      [
+        "PALI",
+        "PALI IND. AREA"
+      ],
+      [
+        "SBI",
+        "SME G S Road Branch"
+      ],
+      [
+        "Gopalganj",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "AJMER RAJASTHAN",
+        "KISHANGARH"
+      ],
+      [
+        "Buldhana",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Balasore",
+        "State Bank of India"
+      ],
+      [
+        "Nagercoil",
+        "SBI"
+      ],
+      [
+        "Akbarpur, Ramabai Nagar",
+        "State Bank of India"
+      ],
+      [
+        "Raichur",
+        "State Bank of India"
+      ],
+      [
+        "JAISALMER",
+        "JAISALMER RAJASTHAN"
+      ],
+      [
+        "State Bank of India",
+        "Uttar Pradesh"
+      ],
+      [
+        "SBI",
+        "SME Chittoor"
+      ],
+      [
+        "ALAPPUZHA",
+        "AM KERALA"
+      ],
+      [
+        "New Guwahati",
+        "SBI"
+      ],
+      [
+        "Kakinada Branch",
+        "SBI Branches in Andhra Pradesh"
+      ],
+      [
+        "Shrirampur",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Nizamabad",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "SME BRANCH NARAINA IND. AREA"
+      ],
+      [
+        "Civil Lines Jabalpur",
+        "Jabalpur Branch"
+      ],
+      [
+        "812 SME Branch",
+        "State Bank of India"
+      ],
+      [
+        "Mathura",
+        "State Bank of India"
+      ],
+      [
+        "Mandi",
+        "State Bank of India"
+      ],
+      [
+        "SPECIALIZED SME BRANCH UDAIPUR",
+        "UDAIPUR RAJASTHAN"
+      ],
+      [
+        "Jamshedpur",
+        "SBI"
+      ],
+      [
+        "North Lakhimpur",
+        "SBI"
+      ],
+      [
+        "Narsinghpur",
+        "State Bank of India"
+      ],
+      [
+        "Kolkata",
+        "State Bank of India"
+      ],
+      [
+        "Ramachira",
+        "Thrissur State Bank"
+      ],
+      [
+        "MIDC MUKUNDNAGAR DHULE)",
+        "SBI"
+      ],
+      [
+        "Jalgaon",
+        "SBI"
+      ],
+      [
+        "Market Branch, Tuni",
+        "SBI Branches in Andhra Pradesh"
+      ],
+      [
+        "Lalitpur",
+        "State Bank of India"
+      ],
+      [
+        "Haridwar",
+        "Haridwar Branch"
+      ],
+      [
+        "Rohtas",
+        "SBI"
+      ],
+      [
+        "Goa",
+        "Vasco-da-Gama"
+      ],
+      [
+        "KADAPA",
+        "SBI"
+      ],
+      [
+        "Bongaigaon",
+        "SBI"
+      ],
+      [
+        "Commercial Branch Girgaon",
+        "State Bank of India"
+      ],
+      [
+        "Indore",
+        "Khel Prashal Branch"
+      ],
+      [
+        "IMT Manesar",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "Sonitpur"
+      ],
+      [
+        "STATE BANK OF INDIA",
+        "TUMAKURU KARNATAKA"
+      ],
+      [
+        "Diamond Plaza",
+        "Kozhikode"
+      ],
+      [
+        "SBI",
+        "Tinsukia"
+      ],
+      [
+        "Bhalka Tirth Branch",
+        "State Bank of India"
+      ],
+      [
+        "SME Katni",
+        "State Bank of India"
+      ],
+      [
+        "Darjeeling",
+        "State Bank of India"
+      ],
+      [
+        "Goa",
+        "Mapuca"
+      ],
+      [
+        "State Bank of India",
+        "Sundernagar"
+      ],
+      [
+        "AM KERALA",
+        "CHHINDWARA"
+      ],
+      [
+        "SBI Kollam",
+        "V & V Apartments"
+      ],
+      [
+        "Morbi",
+        "SBI"
+      ],
+      [
+        "Coimbatore",
+        "SBI"
+      ],
+      [
+        "SBI Branches in Andhra Pradesh",
+        "SBI Port Blair"
+      ],
+      [
+        "Karamal Complex",
+        "SBI Kollam"
+      ],
+      [
+        "Rohtak",
+        "State Bank of India"
+      ],
+      [
+        "Dondaparthi Branch",
+        "Visakhapatnam"
+      ],
+      [
+        "Ratnagiri",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "SBI",
+        "Sivaganga"
+      ],
+      [
+        "Peenya Industrial Estate",
+        "State Bank of India"
+      ],
+      [
+        "Faizabad",
+        "State Bank of India"
+      ],
+      [
+        "JanJGir-Champa",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Krishna",
+        "SBI"
+      ],
+      [
+        "Incube Bangalore Local Head Office Complex",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "Samastipur"
+      ],
+      [
+        "Chandrapur",
+        "State Bank of India (SBI)"
+      ],
+      [
+        "Connaught Circus",
+        "SBI"
+      ],
+      [
+        "Cooch Behar",
+        "State Bank of India"
+      ],
+      [
+        "Mysuru",
+        "State Bank of India"
+      ],
+      [
+        "SBI",
+        "Tiruppur"
+      ],
+      [
+        "Kannur",
+        "State Bank of India in Kannur"
+      ],
+      [
+        "Anaparthi Branch",
+        "SBI Branches in Andhra Pradesh"
+      ],
+      [
+        "Giridih",
+        "State Bank of India"
+      ],
+      [
+        "Sri Vaishnavi Arcade",
+        "State Bank of India"
+      ],
+      [
+        "C.G. ROAD, AHMEDABAD",
+        "SBI"
+      ],
+      [
+        "Shahdol",
+        "State Bank of India"
+      ],
+      [
+        "Bengaluru",
+        "SBI"
+      ],
+      [
+        "CHINGLEPUT",
+        "STATE BANK OF INDIA"
+      ],
+      [
+        "Kachanathu Tower",
+        "SBI Kollam"
+      ],
+      [
+        "Sambalpur",
+        "State Bank of India"
+      ],
+      [
+        "SME Aska",
+        "State Bank of India"
+      ],
+      [
+        "Barasat",
+        "SBI"
+      ],
+      [
+        "BUNDI",
+        "BUNDI GURU NANAK COLONY"
+      ],
+      [
+        "Sadar Bazar Sendhwa",
+        "Sendhwa Branch"
+      ],
+      [
+        "Guwahati",
+        "SBI"
+      ],
+      [
+        "SBI",
+        "SME ERNAKULAM"
+      ],
+      [
+        "State Bank of India",
+        "Uttar Dinajpur"
+      ]
+    ],
+    "count": 798,
+    "create_time": 1754996471,
+    "update_time": 1754996471,
+    "_id": "doc-0c21209771e004f0ecce8777547bcb33"
+  },
+  "doc-9cd7ce999845c68ce90a0c663a27a769": {
+    "relation_pairs": [
+      [
+        "Mudra Loans",
+        "Working Capital"
+      ],
+      [
+        "Entrepreneurship Development Programme (EDP)",
+        "PMEGP"
+      ],
+      [
+        "Government Schemes",
+        "MSMEs"
+      ],
+      [
+        "MSME Loans",
+        "Overdraft Facilities"
+      ],
+      [
+        "CGTMSE",
+        "MSEs"
+      ],
+      [
+        "Loan Application",
+        "Loan Processing"
+      ],
+      [
+        "Mudra Yojana",
+        "Udyamimitra portal"
+      ],
+      [
+        "MSEs",
+        "PMEGP"
+      ],
+      [
+        "Disbursal",
+        "Loan Processing"
+      ],
+      [
+        "MSME Loans",
+        "Working Capital Loans"
+      ],
+      [
+        "MSME Loans",
+        "Micro, Small, and Medium Enterprises"
+      ],
+      [
+        "Credit Guarantee Fund Scheme for Micro and Small Enterprises (CGTMSE)",
+        "Micro, Small, and Medium Enterprises"
+      ],
+      [
+        "SC/ST",
+        "Women Entrepreneurs"
+      ],
+      [
+        "Micro, Small, and Medium Enterprises",
+        "UDYAM Portal"
+      ],
+      [
+        "MSMED Act, 2006",
+        "Micro, Small, and Medium Enterprises"
+      ],
+      [
+        "Mudra Loans",
+        "Udyamimitra Portal"
+      ],
+      [
+        "Financial Statements",
+        "Loan Application"
+      ],
+      [
+        "PMEGP",
+        "Subsidy Rates"
+      ],
+      [
+        "CGTMSE",
+        "Hybrid Security Model"
+      ],
+      [
+        "Business Credit Cards",
+        "MSME Loans"
+      ],
+      [
+        "Women Entrepreneurs",
+        "ZED-certified Units"
+      ],
+      [
+        "KVIC",
+        "PMEGP"
+      ],
+      [
+        "Equipment Financing",
+        "MSME Loans"
+      ],
+      [
+        "Banks",
+        "CGTMSE"
+      ],
+      [
+        "MSEs",
+        "Mudra Yojana"
+      ],
+      [
+        "Mudra Loans",
+        "Women Entrepreneurs"
+      ],
+      [
+        "Marginalized Sections of Society",
+        "Mudra Loans"
+      ],
+      [
+        "MSME Loans",
+        "Term Loans"
+      ],
+      [
+        "CGTMSE",
+        "Member Lending Institutions (MLIs)"
+      ],
+      [
+        "Business Plan",
+        "Loan Application"
+      ]
+    ],
+    "count": 30,
+    "create_time": 1754996548,
+    "update_time": 1754996548,
+    "_id": "doc-9cd7ce999845c68ce90a0c663a27a769"
+  },
+  "doc-aa62e9dc12a88d354ed3a0d555b970db": {
+    "relation_pairs": [
+      [
+        "MSME",
+        "Vendor Development Programmes"
+      ],
+      [
+        "CGTMSE",
+        "SIDBI"
+      ],
+      [
+        "Aadhaar Number",
+        "Udyam Registration"
+      ],
+      [
+        "Jorhat",
+        "MSME – DI Campus"
+      ],
+      [
+        "Gangtok",
+        "Sikkim"
+      ],
+      [
+        "MSME SAMPARK Portal",
+        "Various Public/Private Banks"
+      ],
+      [
+        "Khadi and Village Industries Commission (KVIC)",
+        "Prime Minister's Employment Generation Programme (PMEGP)"
+      ],
+      [
+        "Haldwani",
+        "Uttarakhand"
+      ],
+      [
+        "Director/Deputy Secretary (ARI)",
+        "Ministry of MSME"
+      ],
+      [
+        "Balanagar",
+        "CITD Hyderabad"
+      ],
+      [
+        "Application Process",
+        "State Governments"
+      ],
+      [
+        "Intellectual Property Rights (IPRs)",
+        "MSME Development Institutes"
+      ],
+      [
+        "Ministry of MSME",
+        "Nirman Bhawan"
+      ],
+      [
+        "MSME",
+        "Udyam Registration"
+      ],
+      [
+        "MSME",
+        "NABARD"
+      ],
+      [
+        "CDGI",
+        "Firozabad"
+      ],
+      [
+        "CIHT Jalandhar",
+        "Shaheed Bhagat Singh Colony"
+      ],
+      [
+        "Cabinet Committee on Economic Affairs (CCEA)",
+        "Fund of Funds (FoF)"
+      ],
+      [
+        "Expertise in Cluster Development",
+        "Ministry of MSME"
+      ],
+      [
+        "MSMEs",
+        "Udyam Portal"
+      ],
+      [
+        "Fund of Funds (FoF)",
+        "Mother Fund"
+      ],
+      [
+        "IT Incubation Centre, Hyderabad",
+        "Sh. Prabhu H.S."
+      ],
+      [
+        "Government e-Marketplace",
+        "MSME"
+      ],
+      [
+        "Digital India objectives",
+        "Government e-Marketplace (GeM)"
+      ],
+      [
+        "Government e-Marketplace (GeM)",
+        "Public Procurement Policy (PPP) for MSEs"
+      ],
+      [
+        "Guwahati",
+        "MSME – DI Campus"
+      ],
+      [
+        "MSME Testing Centre, Mumbai",
+        "MSME Testing Centre, New Delhi"
+      ],
+      [
+        "Government departments",
+        "online grievance redressal mechanism"
+      ],
+      [
+        "Non-Government Organizations (NGOs)",
+        "Panchayati Raj Institutions (PRIs)"
+      ],
+      [
+        "Fund of Funds (FoF)",
+        "Self Reliant India (SRI) Fund"
+      ],
+      [
+        "Entrepreneurship and Skill Development Programme (ESDP)",
+        "Skill Development and Training"
+      ],
+      [
+        "GoI",
+        "Private Sector /Corporate entities"
+      ],
+      [
+        "NSIC Venture Capital Fund Ltd.",
+        "National Small Industry Corporation Ltd. (NSIC)"
+      ],
+      [
+        "Common Facility Centres (CFCs)",
+        "Micro and Small Enterprises Cluster Development Programme"
+      ],
+      [
+        "CTTC",
+        "Indore"
+      ],
+      [
+        "District Patna",
+        "Greater Noida"
+      ],
+      [
+        "Berhampur",
+        "CTTC"
+      ],
+      [
+        "Micro, Small and Medium Enterprises (MSMEs)",
+        "Udyam"
+      ],
+      [
+        "CHAMPIONS Portal",
+        "MSME Samadhaan Portal"
+      ],
+      [
+        "Emergency Credit Line",
+        "MSMEs"
+      ],
+      [
+        "Micro and Small Enterprises Cluster Development Programme",
+        "National Level Steering Committee of MSE-CDP"
+      ],
+      [
+        "Cuttack",
+        "Odisha"
+      ],
+      [
+        "Entrepreneurship Awareness Programmes (EAPs)",
+        "Industrial Motivational Campaign (IMC)"
+      ],
+      [
+        "MSME",
+        "SIDBI"
+      ],
+      [
+        "Gangtok",
+        "MSME Development Institutes"
+      ],
+      [
+        "Udyam Registration",
+        "Udyam Registration Portal"
+      ],
+      [
+        "DC MSME",
+        "Executive Orders"
+      ],
+      [
+        "MSME SAMPARK Portal",
+        "Various Reputed National & Multinational Companies"
+      ],
+      [
+        "CTTC",
+        "Extension Centres of Technology Centres"
+      ],
+      [
+        "Digital MSME Scheme",
+        "Government of India"
+      ],
+      [
+        "MSME Testing Captain Gaur Marg",
+        "MSME Testing Centre, New Delhi"
+      ],
+      [
+        "Ahemdabad",
+        "IGTR Ahmedabad"
+      ],
+      [
+        "Hubli",
+        "MSME Development Institutes"
+      ],
+      [
+        "GoI",
+        "Micro and Small Enterprises Cluster Development Programme (MSE-CDP)"
+      ],
+      [
+        "Agra",
+        "MSME Development Institutes"
+      ],
+      [
+        "Corporation Bank",
+        "MSEs"
+      ],
+      [
+        "Government Ministries and Departments",
+        "Integrated Payment System"
+      ],
+      [
+        "PPDC, Madurai",
+        "Sh. K. Jayachandiran"
+      ],
+      [
+        "Haldwani",
+        "MSME Development Institutes"
+      ],
+      [
+        "DIC Ranchi",
+        "Kokar Industrial Estate"
+      ],
+      [
+        "Khadi and Village Industries Commission (KVIC)",
+        "Livelihood Business Incubators (LBIs)"
+      ],
+      [
+        "MSME Testing Centre, Chennai",
+        "MSME Testing Centre, Kolkata"
+      ],
+      [
+        "IDEMI",
+        "Shikha Pal"
+      ],
+      [
+        "Bhiwadi",
+        "CTTC"
+      ],
+      [
+        "GoI",
+        "Non-Government Organizations (NGOs)"
+      ],
+      [
+        "Micro and Small Enterprises Cluster Development Programme",
+        "Technology Centres"
+      ],
+      [
+        "Micro and Small Enterprises (MSEs)",
+        "Public Procurement Policy (PPP) for MSEs"
+      ],
+      [
+        "MSME SAMPARK Portal",
+        "Ministry of MSME"
+      ],
+      [
+        "Indore",
+        "MSME Development Institutes"
+      ],
+      [
+        "MSME Act",
+        "Udyam Registration"
+      ],
+      [
+        "CTTCKolkata",
+        "Hooghly Industrial Area"
+      ],
+      [
+        "MSME Development Institutes",
+        "Udyam Registration"
+      ],
+      [
+        "BoB",
+        "MSEs"
+      ],
+      [
+        "MSME Technology Centres",
+        "Students"
+      ],
+      [
+        "Agra",
+        "CFTI"
+      ],
+      [
+        "Government of India",
+        "MSME"
+      ],
+      [
+        "MSME SAMADHAAN Portal",
+        "Micro, Small and Medium Enterprise Development (MSMED) Act, 2006"
+      ],
+      [
+        "Central Government",
+        "Government Ministries and Departments"
+      ],
+      [
+        "MSME Development Institute",
+        "Mumbai"
+      ],
+      [
+        "Kolkata",
+        "MSME Development Institutes"
+      ],
+      [
+        "MSME SAMADHAAN Portal",
+        "Ministry of MSME"
+      ],
+      [
+        "MSME",
+        "Public Procurement Policy (PPP)"
+      ],
+      [
+        "Canara Bank",
+        "MSME"
+      ],
+      [
+        "Chennai",
+        "MSME Development Institutes"
+      ],
+      [
+        "CTTC",
+        "L. Rajashekhar"
+      ],
+      [
+        "GSTIN",
+        "Udyam Registration"
+      ],
+      [
+        "Atmanirbhar Bharat Package",
+        "Fund of Funds (FoF)"
+      ],
+      [
+        "MSME Development Institutes",
+        "Mumbai"
+      ],
+      [
+        "Credit Linked Capital Subsidy for Technology Upgradation (CLCSS)",
+        "Micro and Small Enterprises (MSEs)"
+      ],
+      [
+        "CTTC",
+        "Haldwani"
+      ],
+      [
+        "Andhra Bank",
+        "MSEs"
+      ],
+      [
+        "Credit Guarantee Scheme for Micro and Small Enterprises",
+        "MSMEs"
+      ],
+      [
+        "Maharashtra",
+        "Mumbai"
+      ],
+      [
+        "CFTI",
+        "Chennai"
+      ],
+      [
+        "Credit Linked Capital Subsidy for Technology Upgradation (CLCSS)",
+        "MSME-Technology Development Centres"
+      ],
+      [
+        "Ministry of MSME",
+        "Public Procurement Policy (PPP) for MSEs"
+      ],
+      [
+        "Gamharia",
+        "IDTR Jamshedpur"
+      ],
+      [
+        "Jammu",
+        "MSME Development Institutes"
+      ],
+      [
+        "PMEGP",
+        "Udyam Registration"
+      ],
+      [
+        "DIC Patna",
+        "Patilputra Industrial Estate"
+      ],
+      [
+        "Basic PSUs",
+        "MSME SAMADHAAN Portal"
+      ],
+      [
+        "CTTC",
+        "Kota"
+      ],
+      [
+        "Ahmedabad",
+        "Gujarat"
+      ],
+      [
+        "Daughter Funds",
+        "Mother Fund"
+      ],
+      [
+        "MSME Development Institutes",
+        "MSMEs"
+      ],
+      [
+        "Micro & Small Enterprises Cluster Development (MSE-CDP)",
+        "Scheme of Fund for Regeneration of Traditional Industries (SFURTI)"
+      ],
+      [
+        "MSEs",
+        "Subordinate Debt Scheme for Stressed MSMEs"
+      ],
+      [
+        "DIC Mumbai",
+        "Goshala Road"
+      ],
+      [
+        "Assam",
+        "Guwahati"
+      ],
+      [
+        "Agra",
+        "Uttar Pradesh"
+      ],
+      [
+        "Prime Minister's Employment Generation Programme (PMEGP)",
+        "Self Help Groups"
+      ],
+      [
+        "MSME Technology Centres",
+        "Ministry of MSME"
+      ],
+      [
+        "MSME",
+        "Trade Fairs"
+      ],
+      [
+        "Bhavnagar",
+        "IGTR"
+      ],
+      [
+        "Central Government",
+        "Digital India objectives"
+      ],
+      [
+        "MSEs",
+        "SBI"
+      ],
+      [
+        "Amingaon Industrial Area",
+        "TRTC Guwahati"
+      ],
+      [
+        "Ashwin Dhivakar",
+        "PPDC"
+      ],
+      [
+        "PPDC, Agra",
+        "Sh. D. Balaguru"
+      ],
+      [
+        "Champions Control Rooms",
+        "Udyam Registration"
+      ],
+      [
+        "Bhopal Industrial Area",
+        "Rajaji Nagar Industrial Estate"
+      ],
+      [
+        "Private Sector /Corporate entities",
+        "cluster-specific SPVs"
+      ],
+      [
+        "MSME Development Institutes",
+        "Margao"
+      ],
+      [
+        "A. P. Sharma",
+        "CTR Extension Centres"
+      ],
+      [
+        "Central Government",
+        "Public Sector Undertakings"
+      ],
+      [
+        "Government of India",
+        "msme.gov.in"
+      ],
+      [
+        "PPDC",
+        "Vijay D."
+      ],
+      [
+        "Agra",
+        "PPDC"
+      ],
+      [
+        "Kajal Kumar Saha",
+        "MSME Development Institute"
+      ],
+      [
+        "Micro and Small Enterprises (MSEs)",
+        "Vendor Development Programmes"
+      ],
+      [
+        "Angamaly, Kerala",
+        "Infrastructure Kerala Limited (INKEL)"
+      ],
+      [
+        "GoI",
+        "Micro and Small Enterprises Cluster Development Programme"
+      ],
+      [
+        "GoI",
+        "Ministry of MSME"
+      ],
+      [
+        "CTTC",
+        "Hyderabad"
+      ],
+      [
+        "Livelihood Business Incubators (LBIs)",
+        "National Small Industries Corporation (NSIC)"
+      ],
+      [
+        "Delayed Payments",
+        "MSME SAMADHAAN Portal"
+      ],
+      [
+        "MSME",
+        "Procurement and Marketing Support (PMS) Scheme"
+      ],
+      [
+        "DC MSME",
+        "MSME Development Commissioner"
+      ],
+      [
+        "Capacity Building of Officers",
+        "Financial Support to MSMEs in ZED Certification Scheme"
+      ],
+      [
+        "Ministry of MSME",
+        "Technology Parks"
+      ],
+      [
+        "Guwahati",
+        "MSME Development Institutes"
+      ],
+      [
+        "Hyderabad",
+        "MSME Development Institutes"
+      ],
+      [
+        "CGTMSE",
+        "Government of India (GoI)"
+      ],
+      [
+        "MSME-Development Institutes",
+        "Mega Events"
+      ],
+      [
+        "MSME",
+        "SBI"
+      ],
+      [
+        "2% Interest Subvention Scheme",
+        "Micro and Small Enterprises (MSEs)"
+      ],
+      [
+        "Lean Manufacturing Competitiveness Scheme (LMCS)",
+        "MSME"
+      ],
+      [
+        "DIC Delhi",
+        "Okhla Industrial Estate"
+      ],
+      [
+        "FFDC",
+        "Kannauj"
+      ],
+      [
+        "Agra",
+        "CTTC"
+      ],
+      [
+        "Ludhiana",
+        "MSME Development Institutes"
+      ],
+      [
+        "Skill Development and Training",
+        "Technology Centres (Tool Rooms & Technology Development Centres)"
+      ],
+      [
+        "MSME Development Institutes",
+        "Muzaffarpur"
+      ],
+      [
+        "CTTC",
+        "Sh. A. S. Umasankar"
+      ],
+      [
+        "CTTC",
+        "Udaipur"
+      ],
+      [
+        "Bangalore",
+        "MSME Development Institutes"
+      ],
+      [
+        "Jaipur",
+        "MSME Development Institutes"
+      ],
+      [
+        "Atmanirbhar Bharat",
+        "Ministry of MSME"
+      ],
+      [
+        "MSME-Development Institutes",
+        "Management Development Programmes (MDP)"
+      ],
+      [
+        "E-learning",
+        "MSME Development Institutes"
+      ],
+      [
+        "GoI",
+        "State Innovation Cluster Development Programme"
+      ],
+      [
+        "CTTC",
+        "Madurai"
+      ],
+      [
+        "Credit Linked Capital Subsidy for Technology Upgradation (CLCSS)",
+        "MSME"
+      ],
+      [
+        "IGTR",
+        "Indrakuamr Hariramani"
+      ],
+      [
+        "Ministry of Micro, Small & Medium Enterprises",
+        "Office of the Development Commissioner (MSME)"
+      ],
+      [
+        "Ahmedabad",
+        "MSME Development Institutes"
+      ],
+      [
+        "MSME SAMADHAAN Portal",
+        "MSME SAMPARK Portal"
+      ],
+      [
+        "2% Interest Subvention Scheme for MSMEs 2018",
+        "MSEs"
+      ],
+      [
+        "Bihar",
+        "Muzaffarpur"
+      ],
+      [
+        "MSME-Development Institutes",
+        "Micro and Small Enterprises Cluster Development Programme"
+      ],
+      [
+        "Credit Guarantee Scheme for Micro and Small Enterprises",
+        "Government of India (GoI)"
+      ],
+      [
+        "MSME",
+        "Marketing Haats"
+      ],
+      [
+        "Government Ministries and Departments",
+        "proprietary Article Certificate Bid"
+      ],
+      [
+        "MSME Development Institutes",
+        "Zero Defect Zero Effect (ZED) Certification Scheme"
+      ],
+      [
+        "Chennai",
+        "Tamil Nadu"
+      ],
+      [
+        "Bhawanipatna",
+        "CTTC"
+      ],
+      [
+        "CTTC",
+        "Sh. Sachin Sarswat"
+      ],
+      [
+        "Government of India",
+        "Ministry of Micro, Small & Medium Enterprises"
+      ],
+      [
+        "Allahabad",
+        "MSME Development Institutes"
+      ],
+      [
+        "CLCSS",
+        "Udyam Registration"
+      ],
+      [
+        "Cuttack",
+        "MSME Development Institutes"
+      ],
+      [
+        "CTTC, Bhubaneswar",
+        "IDTR, Jamshedpur"
+      ],
+      [
+        "PMEGP",
+        "Production Co-operative Societies"
+      ],
+      [
+        "PPDC",
+        "Sunil Gupta"
+      ],
+      [
+        "H. D. Kapse",
+        "IGTR"
+      ],
+      [
+        "MSME-DIs",
+        "Nirman Bhawan"
+      ],
+      [
+        "Credit Linked Capital Subsidy",
+        "Eligible SC/ST, Women, NER / Hill States / Aspirational Districts / LWE Districts"
+      ],
+      [
+        "Stressed MSMEs",
+        "Subordinate Debt"
+      ],
+      [
+        "Imphal",
+        "MSME Development Institutes"
+      ],
+      [
+        "Digital MSME Scheme",
+        "IISc Bengaluru"
+      ],
+      [
+        "Capacity Building of Officers",
+        "Government of India"
+      ],
+      [
+        "Karnal",
+        "MSME Development Institutes"
+      ],
+      [
+        "Ayyanthole, Thrissur",
+        "DIC Thrissur"
+      ],
+      [
+        "IDEMI",
+        "Mumbai"
+      ],
+      [
+        "A Scheme for Promotion of Innovation, Rural Industry and Entrepreneurship (ASPIRE)",
+        "Ministry of MSME"
+      ],
+      [
+        "Digital MSME Scheme",
+        "Mini Technology Centers"
+      ],
+      [
+        "CGTMSE",
+        "Udyam Registration"
+      ],
+      [
+        "Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE)",
+        "Prime Minister's Employment Generation Programme (PMEGP)"
+      ],
+      [
+        "DIC Raipur",
+        "Near Urkala Railway Station"
+      ],
+      [
+        "CTTC",
+        "Sh. L. Rajashekhar"
+      ],
+      [
+        "Bhiwadi",
+        "MSME-DI Jammu"
+      ],
+      [
+        "Udyam",
+        "Udyam Registration"
+      ],
+      [
+        "Public Procurement Policy (PPP) for MSEs",
+        "Sambandh Portal"
+      ],
+      [
+        "MSEs",
+        "NABARD"
+      ],
+      [
+        "Technology Centres",
+        "Tooling Facilities"
+      ],
+      [
+        "Ludhiana",
+        "Punjab"
+      ],
+      [
+        "Kanpur",
+        "MSME Development Institutes"
+      ],
+      [
+        "Ahmedabad",
+        "IGTR"
+      ],
+      [
+        "DICs",
+        "Udyam Registration"
+      ],
+      [
+        "Business Incubator (BI)",
+        "Host Institute (HI)"
+      ],
+      [
+        "NH 39, Imphal, Manipur",
+        "TC Imphal Nilakuthi Food Park"
+      ],
+      [
+        "CGTMSE",
+        "Swavalamban Bhavan"
+      ],
+      [
+        "PPDC, Agra",
+        "Sh. Goutam Maiti"
+      ],
+      [
+        "CTTC",
+        "Sh. K. Jayachandiran"
+      ],
+      [
+        "Micro and Small Enterprises Cluster Development Programme",
+        "NER & Sikkim"
+      ],
+      [
+        "Host Institute (HI)",
+        "MSME Development Institutes"
+      ],
+      [
+        "CHAMPIONS Portal",
+        "Udyam Registration"
+      ],
+      [
+        "CTTC",
+        "Sh. Deepak Gupta"
+      ],
+      [
+        "MSME",
+        "Support for Entrepreneurial and Managerial Development of MSMEs through Incubators"
+      ],
+      [
+        "Bangalore",
+        "Karnataka"
+      ],
+      [
+        "Development Commissioner MSME",
+        "MSME Development Institutes"
+      ]
+    ],
+    "count": 221,
+    "create_time": 1754997083,
+    "update_time": 1754997083,
+    "_id": "doc-aa62e9dc12a88d354ed3a0d555b970db"
+  }
+}
