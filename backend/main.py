@@ -87,9 +87,9 @@ async def assess(request: AssessRequest):
     
     score_result = compute_score(payload)
     
-    # Get RAG-powered recommendations based on business plan
+    # Get RAG-powered recommendations based on business plan and Udyam registration
     try:
-        recs = await retrieve_recommendations(sanitized_plan, top_k=3)
+        recs = await retrieve_recommendations(sanitized_plan, top_k=3, udyam_registration=request.udyamRegistration)
     except Exception as e:
         logger.error(f"Error retrieving recommendations: {e}")
         recs = ["Unable to generate recommendations at this time."]

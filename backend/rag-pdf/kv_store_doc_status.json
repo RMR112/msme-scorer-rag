@@ -46,7 +46,7 @@
     "content_length": 101367,
     "created_at": "2025-08-12T10:36:55.350711+00:00",
     "updated_at": "2025-08-12T11:01:11.397871+00:00",
-    "file_path": "unknown_source",
+    "file_path": "msme_e-book_1.pdf",
     "track_id": "insert_20250812_160655_fd347613",
     "metadata": {
       "processing_start_time": 1754995015,
@@ -65,7 +65,7 @@
     "content_length": 11096,
     "created_at": "2025-08-12T11:01:12.571095+00:00",
     "updated_at": "2025-08-12T11:02:28.925887+00:00",
-    "file_path": "unknown_source",
+    "file_path": "MSME Loan.pdf",
     "track_id": "insert_20250812_163112_464b0f66",
     "metadata": {
       "processing_start_time": 1754996472,
@@ -100,7 +100,7 @@
     "content_length": 74999,
     "created_at": "2025-08-12T11:02:37.901895+00:00",
     "updated_at": "2025-08-12T11:11:23.987292+00:00",
-    "file_path": "unknown_source",
+    "file_path": "17032022_SME Intensive Branches.pdf",
     "track_id": "insert_20250812_163237_f6b78bfe",
     "metadata": {
       "processing_start_time": 1754996557,

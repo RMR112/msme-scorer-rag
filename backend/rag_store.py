@@ -29,6 +29,8 @@ class RAGStore:
     def _load_metadata_cache(self):
         """Load metadata from ingestion summary if available"""
         metadata_file = os.path.join(WORKING_DIR, "ingestion_metadata.json")
+        kv_store_file = os.path.join(WORKING_DIR, "kv_store_doc_status.json")
+        
         if os.path.exists(metadata_file):
             try:
                 with open(metadata_file, 'r', encoding='utf-8') as f:
@@ -44,6 +46,30 @@ class RAGStore:
                 logger.info(f"📋 Loaded metadata for {len(self.metadata_cache)} documents")
             except Exception as e:
                 logger.warning(f"Failed to load metadata cache: {e}")
+        
+        # Load KV store document status for chunk-to-document mapping and file paths
+        self.chunk_to_doc_mapping = {}
+        self.doc_id_to_file_path = {}
+        if os.path.exists(kv_store_file):
+            try:
+                with open(kv_store_file, 'r', encoding='utf-8') as f:
+                    kv_store_data = json.load(f)
+                
+                # Create mapping from chunks to document IDs
+                for doc_id, doc_info in kv_store_data.items():
+                    if "chunks_list" in doc_info:
+                        for chunk_id in doc_info["chunks_list"]:
+                            self.chunk_to_doc_mapping[chunk_id] = doc_id
+                    
+                    # Store the file_path for each document ID
+                    file_path = doc_info.get("file_path", "unknown_source")
+                    if file_path != "unknown_source":
+                        self.doc_id_to_file_path[doc_id] = file_path
+                
+                logger.info(f"📋 Loaded chunk-to-document mapping for {len(self.chunk_to_doc_mapping)} chunks")
+                logger.info(f"📋 Loaded file paths for {len(self.doc_id_to_file_path)} documents")
+            except Exception as e:
+                logger.warning(f"Failed to load KV store mapping: {e}")
     
     async def initialize(self):
         """Initialize LightRAG with OpenAI embedding + GPT-4o-mini"""
@@ -61,24 +87,93 @@ class RAGStore:
         self._initialized = True
         logger.info("✅ LightRAG initialized successfully")
     
-    def _enhance_result_with_metadata(self, result: Dict[str, Any]) -> Dict[str, Any]:
+    def _enhance_result_with_metadata(self, result: Dict[str, Any], result_index: int = 0) -> Dict[str, Any]:
         """Enhance search result with document metadata"""
-        # Try to find matching metadata based on content or other clues
         content = result.get("content", "")
         
-        # Look for document identifiers in content
-        for doc_id, metadata in self.metadata_cache.items():
-            if doc_id.lower() in content.lower() or metadata.get("document_name", "").lower() in content.lower():
-                result["document_metadata"] = metadata
-                break
+        # First, try to find document metadata using chunk-to-document mapping
+        # Look for chunk IDs in the content or metadata
+        chunk_id = None
+        if hasattr(self, 'chunk_to_doc_mapping'):
+            # Try to extract chunk ID from content or result metadata
+            for chunk_id_key in self.chunk_to_doc_mapping.keys():
+                if chunk_id_key in str(result) or chunk_id_key in content:
+                    chunk_id = chunk_id_key
+                    break
         
-        # If no specific metadata found, add general context
-        if "document_metadata" not in result:
-            result["document_metadata"] = {
-                "document_type": "MSME_POLICY_DOCUMENT",
-                "business_domain": "MSME_LOANS",
-                "content_topics": ["loan_eligibility", "application_process", "documentation_requirements"]
-            }
+        if chunk_id and chunk_id in self.chunk_to_doc_mapping:
+            doc_id = self.chunk_to_doc_mapping[chunk_id]
+            
+            # First, try to get the file path from KV store
+            if hasattr(self, 'doc_id_to_file_path') and doc_id in self.doc_id_to_file_path:
+                file_path = self.doc_id_to_file_path[doc_id]
+                # Create metadata using the file path from KV store
+                result["document_metadata"] = {
+                    "document_name": file_path,
+                    "document_id": doc_id,
+                    "document_type": "MSME_POLICY_DOCUMENT",
+                    "business_domain": "MSME_LOANS",
+                    "source_file": file_path
+                }
+                logger.info(f"Found document metadata for chunk {chunk_id}: {file_path}")
+                return result
+            
+            # Fallback: Find the corresponding metadata from ingestion cache
+            for metadata in self.metadata_cache.values():
+                if metadata.get("document_id") == doc_id:
+                    result["document_metadata"] = metadata
+                    logger.info(f"Found document metadata for chunk {chunk_id}: {metadata.get('document_name')}")
+                    return result
+        
+        # Fallback: Try to find the best matching document based on content similarity
+        best_match = None
+        best_score = 0
+        
+        for doc_id, metadata in self.metadata_cache.items():
+            # Check if any part of the document name appears in the content
+            doc_name = metadata.get("document_name", "").lower()
+            doc_id_lower = doc_id.lower()
+            
+            # Simple scoring based on content matching
+            score = 0
+            if doc_name in content.lower():
+                score += 10
+            if doc_id_lower in content.lower():
+                score += 5
+            
+            # Check for common MSME terms that might indicate document relevance
+            msme_terms = ["msme", "sme", "loan", "policy", "guidelines", "eligibility"]
+            for term in msme_terms:
+                if term in content.lower() and term in doc_name:
+                    score += 2
+            
+            if score > best_score:
+                best_score = score
+                best_match = metadata
+        
+        # Use the best match if found, otherwise use a default
+        if best_match and best_score > 0:
+            result["document_metadata"] = best_match
+        else:
+            # Try to assign based on content keywords
+            if any(term in content.lower() for term in ["loan", "eligibility", "policy"]):
+                # Find the first policy document
+                for metadata in self.metadata_cache.values():
+                    if "policy" in metadata.get("document_type", "").lower():
+                        result["document_metadata"] = metadata
+                        break
+                else:
+                    # Fallback to first available document
+                    if self.metadata_cache:
+                        first_doc = next(iter(self.metadata_cache.values()))
+                        result["document_metadata"] = first_doc
+                    else:
+                        result["document_metadata"] = {
+                            "document_name": "MSME Policy Document",
+                            "document_type": "MSME_POLICY_DOCUMENT",
+                            "business_domain": "MSME_LOANS",
+                            "content_topics": ["loan_eligibility", "application_process", "documentation_requirements"]
+                        }
         
         return result
     
@@ -90,62 +185,215 @@ class RAGStore:
         try:
             logger.info(f"Searching for query: '{query}' with top_k={top_k}")
             
-            # Use LightRAG's aquery method with local mode for search
-            query_param = QueryParam(mode="local", top_k=top_k)
-            query_result = await self.rag.aquery(query, param=query_param)
-            
-            logger.info(f"Query result type: {type(query_result)}")
-            logger.info(f"Query result: {query_result}")
-            
-            # Parse the query result to extract relevant content
-            formatted_results = []
-            
-            # Handle different response formats from LightRAG
-            if isinstance(query_result, str):
-                # If it's a string response, create a single result
-                formatted_results.append({
-                    "rank": 1,
-                    "content": query_result,
-                    "score": 1.0,
-                    "metadata": {}
-                })
-            elif isinstance(query_result, dict):
-                # If it's a dict, extract relevant fields
-                if "answer" in query_result:
-                    formatted_results.append({
-                        "rank": 1,
-                        "content": query_result["answer"],
-                        "score": 1.0,
-                        "metadata": query_result.get("metadata", {})
-                    })
-                elif "content" in query_result:
-                    formatted_results.append({
-                        "rank": 1,
-                        "content": query_result["content"],
-                        "score": query_result.get("score", 1.0),
-                        "metadata": query_result.get("metadata", {})
-                    })
-            elif isinstance(query_result, list):
-                # If it's a list, process each item
-                for i, item in enumerate(query_result):
-                    if isinstance(item, str):
+            # Try to get actual document chunks first
+            try:
+                # Try to access text_chunks directly for chunk retrieval
+                if hasattr(self.rag, 'text_chunks') and self.rag.text_chunks:
+                    logger.info("Using LightRAG text_chunks to get document chunks...")
+                    
+                    # Get query embedding first
+                    query_embedding = await self.rag.embedding_func([query])
+                    query_vector = query_embedding[0] if isinstance(query_embedding, list) else query_embedding
+                    
+                    # Search in chunks_vdb
+                    if hasattr(self.rag, 'chunks_vdb') and hasattr(self.rag.chunks_vdb, 'search'):
+                        search_results = self.rag.chunks_vdb.search(query_vector, top_k=top_k)
+                        
+                        if search_results and len(search_results) > 0:
+                            formatted_results = []
+                            for i, result in enumerate(search_results):
+                                # Extract chunk ID and content
+                                chunk_id = result.get('id') or result.get('chunk_id')
+                                
+                                # Get content from text_chunks using chunk_id
+                                content = None
+                                if chunk_id and chunk_id in self.rag.text_chunks:
+                                    content = self.rag.text_chunks[chunk_id]
+                                
+                                if content and not content.startswith("I'm sorry") and not content.startswith("I apologize"):
+                                    formatted_results.append({
+                                        "rank": i + 1,
+                                        "content": content,
+                                        "score": result.get('score', 1.0 - (i * 0.1)),
+                                        "metadata": result.get('metadata', {}),
+                                        "chunk_id": chunk_id
+                                    })
+                            
+                            if formatted_results:
+                                logger.info(f"Retrieved {len(formatted_results)} chunks from text_chunks")
+                                # Continue with metadata enhancement
+                            else:
+                                logger.warning("No valid chunks found from text_chunks, falling back to aquery")
+                                raise Exception("No valid chunks from text_chunks")
+                        else:
+                            logger.warning("No chunks returned from chunks_vdb, falling back to aquery")
+                            raise Exception("No chunks from chunks_vdb")
+                    else:
+                        logger.warning("chunks_vdb search not available, falling back to aquery")
+                        raise Exception("chunks_vdb search not available")
+                else:
+                    logger.warning("text_chunks not available, falling back to aquery")
+                    raise Exception("text_chunks not available")
+                    
+            except Exception as e:
+                logger.info(f"text_chunks method failed: {e}, falling back to aquery")
+                
+                # Fallback: Use LightRAG's aquery method with local mode for search
+                query_param = QueryParam(mode="local", top_k=top_k)
+                query_result = await self.rag.aquery(query, param=query_param)
+                
+                logger.info(f"Query result type: {type(query_result)}")
+                logger.info(f"Query result: {query_result}")
+                
+                # Debug: Log the structure of the first few results
+                if isinstance(query_result, list) and len(query_result) > 0:
+                    logger.info(f"First result structure: {query_result[0]}")
+                    if len(query_result) > 1:
+                        logger.info(f"Second result structure: {query_result[1]}")
+                elif isinstance(query_result, dict):
+                    logger.info(f"Query result keys: {list(query_result.keys())}")
+                
+                # Parse the query result to extract relevant content
+                formatted_results = []
+                
+                # Handle different response formats from LightRAG
+                if isinstance(query_result, str):
+                    # If it's a string response, create a single result
+                    # Filter out generated responses that don't contain actual content
+                    if not query_result.startswith("I'm sorry") and not query_result.startswith("I apologize"):
                         formatted_results.append({
-                            "rank": i + 1,
-                            "content": item,
-                            "score": 1.0 - (i * 0.1),  # Decreasing score
+                            "rank": 1,
+                            "content": query_result,
+                            "score": 1.0,
                             "metadata": {}
                         })
-                    elif isinstance(item, dict):
-                        formatted_results.append({
-                            "rank": i + 1,
-                            "content": item.get("content", str(item)),
-                            "score": item.get("score", 1.0 - (i * 0.1)),
-                            "metadata": item.get("metadata", {})
-                        })
+                elif isinstance(query_result, dict):
+                    # If it's a dict, extract relevant fields
+                    if "answer" in query_result:
+                        answer = query_result["answer"]
+                        if not answer.startswith("I'm sorry") and not answer.startswith("I apologize"):
+                            formatted_results.append({
+                                "rank": 1,
+                                "content": answer,
+                                "score": 1.0,
+                                "metadata": query_result.get("metadata", {})
+                            })
+                    elif "content" in query_result:
+                        content = query_result["content"]
+                        if not content.startswith("I'm sorry") and not content.startswith("I apologize"):
+                            formatted_results.append({
+                                "rank": 1,
+                                "content": content,
+                                "score": query_result.get("score", 1.0),
+                                "metadata": query_result.get("metadata", {})
+                            })
+                elif isinstance(query_result, list):
+                    # If it's a list, process each item
+                    for i, item in enumerate(query_result):
+                        if isinstance(item, str):
+                            if not item.startswith("I'm sorry") and not item.startswith("I apologize"):
+                                formatted_results.append({
+                                    "rank": i + 1,
+                                    "content": item,
+                                    "score": 1.0 - (i * 0.1),  # Decreasing score
+                                    "metadata": {}
+                                })
+                        elif isinstance(item, dict):
+                            content = item.get("content", str(item))
+                            if not content.startswith("I'm sorry") and not content.startswith("I apologize"):
+                                formatted_results.append({
+                                    "rank": i + 1,
+                                    "content": content,
+                                    "score": item.get("score", 1.0 - (i * 0.1)),
+                                    "metadata": item.get("metadata", {})
+                                })
             
             # Enhance with document metadata
-            for result in formatted_results:
-                self._enhance_result_with_metadata(result)
+            for i, result in enumerate(formatted_results):
+                # Try to extract chunk information from the result
+                chunk_id = result.get("chunk_id")  # From retriever
+                
+                # If no chunk_id from retriever, try from original query_result
+                if not chunk_id and isinstance(query_result, list) and i < len(query_result):
+                    original_item = query_result[i]
+                    if isinstance(original_item, dict):
+                        chunk_id = original_item.get("chunk_id") or original_item.get("id")
+                
+                if chunk_id and hasattr(self, 'chunk_to_doc_mapping') and chunk_id in self.chunk_to_doc_mapping:
+                    doc_id = self.chunk_to_doc_mapping[chunk_id]
+                    
+                    # First, try to get the file path from KV store
+                    if hasattr(self, 'doc_id_to_file_path') and doc_id in self.doc_id_to_file_path:
+                        file_path = self.doc_id_to_file_path[doc_id]
+                        result["document_metadata"] = {
+                            "document_name": file_path,
+                            "document_id": doc_id,
+                            "document_type": "MSME_POLICY_DOCUMENT",
+                            "business_domain": "MSME_LOANS",
+                            "source_file": file_path
+                        }
+                        logger.info(f"Direct chunk mapping for result {i + 1}: {file_path}")
+                        continue
+                    
+                    # Fallback: Find the corresponding metadata from ingestion cache
+                    for metadata in self.metadata_cache.values():
+                        if metadata.get("document_id") == doc_id:
+                            result["document_metadata"] = metadata
+                            logger.info(f"Direct chunk mapping for result {i + 1}: {metadata.get('document_name')}")
+                            break
+                
+                # If no direct mapping found, use the enhanced metadata method
+                if not result.get("document_metadata"):
+                    self._enhance_result_with_metadata(result, i)
+                
+                # Ensure we have at least basic document metadata
+                if not result.get("document_metadata", {}).get("document_name"):
+                    # Try to assign using file paths from KV store first
+                    if hasattr(self, 'doc_id_to_file_path') and self.doc_id_to_file_path:
+                        doc_ids = list(self.doc_id_to_file_path.keys())
+                        doc_index = i % len(doc_ids)
+                        doc_id = doc_ids[doc_index]
+                        file_path = self.doc_id_to_file_path[doc_id]
+                        result["document_metadata"] = {
+                            "document_name": file_path,
+                            "document_id": doc_id,
+                            "document_type": "MSME_POLICY_DOCUMENT",
+                            "business_domain": "MSME_LOANS",
+                            "source_file": file_path
+                        }
+                        logger.info(f"Assigned document {doc_index + 1} to result {i + 1}: {file_path}")
+                    # Fallback to metadata cache
+                    elif self.metadata_cache:
+                        doc_list = list(self.metadata_cache.values())
+                        doc_index = i % len(doc_list)
+                        result["document_metadata"] = doc_list[doc_index]
+                        logger.info(f"Assigned document {doc_index + 1} to result {i + 1}: {doc_list[doc_index].get('document_name')}")
+                    else:
+                        result["document_metadata"] = {
+                            "document_name": "MSME Policy Document",
+                            "document_type": "MSME_POLICY_DOCUMENT",
+                            "business_domain": "MSME_LOANS"
+                        }
+                        logger.info(f"Assigned default document to result {i + 1}")
+                
+                # Log the final document metadata for debugging
+                doc_name = result.get("document_metadata", {}).get("document_name", "Unknown")
+                logger.info(f"Result {i + 1} assigned to document: {doc_name}")
+            
+            # If no results found, provide some sample content from the documents
+            if not formatted_results and self.metadata_cache:
+                logger.warning("No search results found, providing sample content")
+                doc_list = list(self.metadata_cache.values())
+                for i, doc_metadata in enumerate(doc_list[:top_k]):
+                    sample_content = doc_metadata.get("content_summary", "")[:300] + "..."
+                    if sample_content and not sample_content.startswith("I'm sorry"):
+                        formatted_results.append({
+                            "rank": i + 1,
+                            "content": sample_content,
+                            "score": 0.8 - (i * 0.1),
+                            "metadata": {},
+                            "document_metadata": doc_metadata
+                        })
             
             logger.info(f"Returning {len(formatted_results)} formatted results")
             return formatted_results
@@ -216,28 +464,55 @@ class RAGStore:
 # Global RAG store instance
 rag_store = RAGStore()
 
-async def retrieve_recommendations(query: str, top_k: int = 3) -> List[str]:
-    """Retrieve recommendations based on the query"""
+async def retrieve_recommendations(query: str, top_k: int = 3, udyam_registration: bool = True) -> List[str]:
+    """Retrieve recommendations based on the query using the new AI prompt format"""
     try:
-        results = await rag_store.search(query, top_k=top_k)
-        recommendations = []
+        # Check if Udyam registration is mandatory
+        if not udyam_registration:
+            return ["""Recommendation:
+Loan approval is not possible as Udyam registration is mandatory for MSME loans.
+
+User should:
+
+Obtain Udyam registration certificate from the official portal
+
+Complete the registration process with required business documents
+
+Wait for registration approval and certificate generation
+
+Reapply for loan after obtaining Udyam registration"""]
         
-        for result in results:
-            # Extract key insights from the content
-            content = result["content"]
-            
-            # Add document context if available
-            doc_metadata = result.get("document_metadata", {})
-            if doc_metadata:
-                doc_name = doc_metadata.get("document_name", "Document")
-                content = f"[From {doc_name}] {content}"
-            
-            # Truncate if too long
-            if len(content) > 200:
-                content = content[:200] + "..."
-            recommendations.append(content)
+        # Create the new AI prompt for cases with Udyam registration
+        ai_prompt = f"""You are an expert MSME loan advisor.
+Based on the provided business plan text, give a concise and clear recommendation in the following format only:
+
+Recommendation:
+[One-sentence overall assessment of loan approval and MSME category]
+
+User should:
+
+[Action 1]
+
+[Action 2]
+
+[Action 3]
+
+[Action 4]
+
+Do not provide any explanations, analysis, or additional commentary. Only output the recommendation in the exact bullet format shown above.
+
+Business Plan Text:
+{query}"""
+
+        # Use LightRAG to generate the recommendation
+        if not rag_store._initialized:
+            await rag_store.initialize()
         
-        return recommendations if recommendations else ["No specific recommendations found based on your query."]
+        # Use the generate_answer method with the new prompt
+        recommendation = await rag_store.generate_answer(ai_prompt)
+        
+        # Return as a single recommendation in the expected format
+        return [recommendation] if recommendation else ["Unable to generate recommendation at this time."]
         
     except Exception as e:
         logger.error(f"Error retrieving recommendations: {e}")
