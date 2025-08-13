@@ -93,7 +93,20 @@ async def assess(request: AssessRequest):
         "businessPlan": sanitized_plan
     }
     
-    score_result = compute_score(payload)
+    score_result = await compute_score(payload)
+    
+    # Check if there's a validation error in the business plan
+    if "error" in score_result:
+        return {
+            "score": score_result["score0to10"],
+            "risk_level": score_result["band"],
+            "recommendations": [score_result["error"]],  # Return the error message as recommendation
+            "details": {
+                "breakdown": score_result["breakdown"],
+                "derived": score_result["derived"],
+                "validation_error": score_result.get("validation_error", "Invalid business plan")
+            }
+        }
     
     # Get RAG-powered recommendations based on business plan and Udyam registration
     try:
@@ -197,7 +210,7 @@ async def assess_legacy(request: Request):
     payload["businessName"] = sanitize_text(payload["businessName"])
     payload["businessPlan"] = sanitize_text(payload["businessPlan"])
 
-    score_result = compute_score(payload)
+    score_result = await compute_score(payload)
     recs = await retrieve_recommendations(payload["businessPlan"], top_k=3)
 
     return {**score_result, "recommendations": recs}

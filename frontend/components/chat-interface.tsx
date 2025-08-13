@@ -23,6 +23,322 @@ interface Citation {
   score: number;
 }
 
+// Query validation function
+const validateQuery = (
+  query: string
+): { isValid: boolean; reason?: string } => {
+  const lowerQuery = query.toLowerCase().trim();
+
+  // Check for empty or very short queries
+  if (lowerQuery.length < 3) {
+    return { isValid: false, reason: "Query is too short" };
+  }
+
+  // Check for PII patterns
+  const piiPatterns = [
+    /\b\d{10}\b/, // 10-digit numbers (phone numbers)
+    /\b\d{12}\b/, // 12-digit numbers (Aadhaar)
+    /\b\d{4}[\s-]?\d{4}[\s-]?\d{4}[\s-]?\d{4}\b/, // Credit card numbers
+    /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/, // Email addresses
+    /\b\d{1,2}[-/]\d{1,2}[-/]\d{2,4}\b/, // Dates
+    /\b\d{1,2}:\d{2}\s?(am|pm)?\b/, // Time
+  ];
+
+  for (const pattern of piiPatterns) {
+    if (pattern.test(query)) {
+      return { isValid: false, reason: "Query contains personal information" };
+    }
+  }
+
+  // Check for toxic/harmful content
+  const toxicKeywords = [
+    "kill",
+    "murder",
+    "death",
+    "suicide",
+    "harm",
+    "hurt",
+    "attack",
+    "violence",
+    "racist",
+    "sexist",
+    "homophobic",
+    "transphobic",
+    "discriminat",
+    "fuck",
+    "shit",
+    "bitch",
+    "asshole",
+    "dick",
+    "pussy",
+    "cunt",
+    "nazi",
+    "hitler",
+    "fascist",
+    "supremacist",
+    "illegal",
+    "crime",
+    "criminal",
+    "fraud",
+    "scam",
+    "cheat",
+  ];
+
+  // Check for security/sensitive content
+  const securityKeywords = [
+    "api key",
+    "api_key",
+    "apikey",
+    "secret",
+    "password",
+    "token",
+    "credential",
+    "private key",
+    "private_key",
+    "system prompt",
+    "system_prompt",
+    "prompt injection",
+    "jailbreak",
+    "bypass",
+    "hack",
+    "exploit",
+    "vulnerability",
+    "backdoor",
+    "admin",
+    "root",
+    "sudo",
+    "privilege",
+    "elevation",
+    "tester",
+    "test mode",
+    "debug",
+    "debugging",
+    "source code",
+    "sourcecode",
+    "codebase",
+    "repository",
+    "git",
+    "config",
+    "configuration",
+    "env",
+    "environment",
+    "variable",
+    "database",
+    "db",
+    "server",
+    "endpoint",
+    "url",
+    "uri",
+    "internal",
+    "private",
+    "sensitive",
+    "confidential",
+    "classified",
+  ];
+
+  for (const keyword of toxicKeywords) {
+    if (lowerQuery.includes(keyword)) {
+      return { isValid: false, reason: "Query contains inappropriate content" };
+    }
+  }
+
+  // Check for security/sensitive content
+  for (const keyword of securityKeywords) {
+    if (lowerQuery.includes(keyword)) {
+      return {
+        isValid: false,
+        reason: "Query contains security-sensitive content",
+      };
+    }
+  }
+
+  // Check for irrelevant topics (non-MSME/business related)
+  const irrelevantTopics = [
+    "movie",
+    "film",
+    "actor",
+    "actress",
+    "celebrity",
+    "star",
+    "hollywood",
+    "bollywood",
+    "sports",
+    "football",
+    "cricket",
+    "tennis",
+    "basketball",
+    "player",
+    "team",
+    "music",
+    "song",
+    "singer",
+    "band",
+    "concert",
+    "album",
+    "food",
+    "recipe",
+    "cooking",
+    "restaurant",
+    "chef",
+    "travel",
+    "vacation",
+    "tourism",
+    "hotel",
+    "flight",
+    "weather",
+    "temperature",
+    "rain",
+    "sunny",
+    "forecast",
+    "politics",
+    "election",
+    "vote",
+    "government",
+    "minister",
+    "entertainment",
+    "gossip",
+    "rumor",
+    "news",
+    "media",
+    "personal",
+    "relationship",
+    "dating",
+    "marriage",
+    "family",
+    "health",
+    "medical",
+    "doctor",
+    "hospital",
+    "medicine",
+    "religion",
+    "god",
+    "prayer",
+    "temple",
+    "church",
+    "mosque",
+    "birthday",
+    "anniversary",
+    "party",
+    "celebration",
+    "game",
+    "gaming",
+    "video game",
+    "playstation",
+    "xbox",
+    "fashion",
+    "clothing",
+    "shopping",
+    "mall",
+    "store",
+  ];
+
+  for (const topic of irrelevantTopics) {
+    if (lowerQuery.includes(topic)) {
+      return {
+        isValid: false,
+        reason: "Query is not related to MSME or business topics",
+      };
+    }
+  }
+
+  // Check for MSME/business related keywords to ensure relevance
+  const msmeKeywords = [
+    "msme",
+    "sme",
+    "loan",
+    "business",
+    "finance",
+    "credit",
+    "bank",
+    "enterprise",
+    "udyam",
+    "registration",
+    "eligibility",
+    "application",
+    "document",
+    "turnover",
+    "profit",
+    "revenue",
+    "investment",
+    "funding",
+    "policy",
+    "guideline",
+    "scheme",
+    "program",
+    "support",
+    "manufacturing",
+    "service",
+    "trading",
+    "industry",
+    "sector",
+    "startup",
+    "entrepreneur",
+    "company",
+    "corporation",
+    "partnership",
+    "tax",
+    "gst",
+    "compliance",
+    "legal",
+    "regulation",
+    "market",
+    "customer",
+    "supplier",
+    "vendor",
+    "client",
+    "technology",
+    "digital",
+    "online",
+    "ecommerce",
+    "platform",
+  ];
+
+  const hasRelevantKeyword = msmeKeywords.some((keyword) =>
+    lowerQuery.includes(keyword)
+  );
+
+  // If no relevant keywords found, check if it's a general business question
+  if (!hasRelevantKeyword) {
+    // Allow some general business-related questions
+    const generalBusinessTerms = [
+      "how to",
+      "what is",
+      "where to",
+      "when to",
+      "why",
+      "which",
+      "process",
+      "procedure",
+      "requirement",
+      "criteria",
+      "condition",
+      "benefit",
+      "advantage",
+      "disadvantage",
+      "risk",
+      "opportunity",
+      "plan",
+      "strategy",
+      "method",
+      "approach",
+      "solution",
+    ];
+
+    const hasGeneralBusinessTerm = generalBusinessTerms.some((term) =>
+      lowerQuery.includes(term)
+    );
+
+    if (!hasGeneralBusinessTerm) {
+      return {
+        isValid: false,
+        reason: "Query is not related to MSME or business topics",
+      };
+    }
+  }
+
+  return { isValid: true };
+};
+
 export function ChatInterface() {
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -56,6 +372,25 @@ export function ChatInterface() {
     setIsLoading(true);
 
     try {
+      // Validate the query first
+      const validation = validateQuery(inputValue);
+
+      if (!validation.isValid) {
+        // Send filtered response without going through RAG search
+        const botMessage: Message = {
+          id: (Date.now() + 1).toString(),
+          content:
+            "I don't have that information. Please let me know if you have any other questions or need assistance with a different topic!",
+          sender: "bot",
+          timestamp: new Date(),
+          // No citations for filtered queries
+        };
+
+        setMessages((prev) => [...prev, botMessage]);
+        return;
+      }
+
+      // Proceed with normal RAG search for valid queries
       const searchResponse = await apiClient.search({
         query: inputValue,
         top_k: 3,

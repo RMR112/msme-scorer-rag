@@ -25,6 +25,49 @@ import {
   XCircle,
 } from "lucide-react";
 
+// AI-powered business plan validation
+const validateBusinessPlanWithAI = async (
+  businessPlan: string
+): Promise<{ isValid: boolean; score: number; reason: string }> => {
+  // Basic validation for obvious issues
+  if (!businessPlan || businessPlan.trim().length < 50) {
+    return {
+      isValid: false,
+      score: 0,
+      reason: "Business plan is too short (minimum 50 characters required)",
+    };
+  }
+
+  // Check for PII patterns (keep this for security)
+  const piiPatterns = [
+    /\b\d{10}\b/, // 10-digit numbers (phone numbers)
+    /\b\d{12}\b/, // 12-digit numbers (Aadhaar)
+    /\b\d{4}[\s-]?\d{4}[\s-]?\d{4}[\s-]?\d{4}\b/, // Credit card numbers
+    /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/, // Email addresses
+  ];
+
+  for (const pattern of piiPatterns) {
+    if (pattern.test(businessPlan)) {
+      return {
+        isValid: false,
+        score: 0,
+        reason:
+          "Business plan contains personal information (phone numbers, emails, etc.)",
+      };
+    }
+  }
+
+  // Let backend AI handle all content validation - no frontend filtering
+
+  // For valid business plans, we'll let the backend AI validation handle the scoring
+  // This prevents double API calls and keeps the logic centralized
+  return {
+    isValid: true,
+    score: 3, // Default score, will be updated by backend
+    reason: "Business plan appears valid, will be evaluated by AI",
+  };
+};
+
 interface FormData {
   businessName: string;
   industryType: string;
@@ -112,7 +155,7 @@ export function LoanForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [result, setResult] = useState<AssessResponse | null>(null);
 
-  const validateForm = (): boolean => {
+  const validateForm = async (): Promise<boolean> => {
     const newErrors: FormErrors = {};
 
     if (!formData.businessName.trim()) {
@@ -148,10 +191,11 @@ export function LoanForm() {
       newErrors.state = "State is required";
     }
 
-    if (!formData.businessPlan.trim()) {
-      newErrors.businessPlan = "Business plan is required";
-    } else if (formData.businessPlan.length < 100) {
-      newErrors.businessPlan = "Business plan must be at least 100 characters";
+    const businessPlanValidation = await validateBusinessPlanWithAI(
+      formData.businessPlan
+    );
+    if (!businessPlanValidation.isValid) {
+      newErrors.businessPlan = businessPlanValidation.reason;
     }
 
     setErrors(newErrors);
@@ -161,7 +205,7 @@ export function LoanForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!validateForm()) {
+    if (!(await validateForm())) {
       return;
     }
 
