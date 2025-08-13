@@ -7,6 +7,7 @@ from lightrag import LightRAG
 from lightrag.llm.openai import gpt_4o_mini_complete, openai_embed
 from lightrag.kg.shared_storage import initialize_pipeline_status
 from lightrag import QueryParam
+from rerank_func import simple_rerank_func
 
 # -------------------------
 # 🔧 Logging
@@ -80,7 +81,8 @@ class RAGStore:
         self.rag = LightRAG(
             working_dir=WORKING_DIR,
             embedding_func=openai_embed,
-            llm_model_func=gpt_4o_mini_complete
+            llm_model_func=gpt_4o_mini_complete,
+            rerank_model_func=simple_rerank_func
         )
         await self.rag.initialize_storages()
         await initialize_pipeline_status()
@@ -177,136 +179,73 @@ class RAGStore:
         
         return result
     
-    async def search(self, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
-        """Search for relevant documents using LightRAG"""
+    async def search(self, query: str, top_k: int = 5, enable_rerank: bool = True) -> List[Dict[str, Any]]:
+        """Search for relevant documents using LightRAG with optional re-ranking"""
         if not self._initialized:
             await self.initialize()
         
         try:
-            logger.info(f"Searching for query: '{query}' with top_k={top_k}")
+            logger.info(f"Searching for query: '{query}' with top_k={top_k}, rerank={enable_rerank}")
             
-            # Try to get actual document chunks first
-            try:
-                # Try to access text_chunks directly for chunk retrieval
-                if hasattr(self.rag, 'text_chunks') and self.rag.text_chunks:
-                    logger.info("Using LightRAG text_chunks to get document chunks...")
-                    
-                    # Get query embedding first
-                    query_embedding = await self.rag.embedding_func([query])
-                    query_vector = query_embedding[0] if isinstance(query_embedding, list) else query_embedding
-                    
-                    # Search in chunks_vdb
-                    if hasattr(self.rag, 'chunks_vdb') and hasattr(self.rag.chunks_vdb, 'search'):
-                        search_results = self.rag.chunks_vdb.search(query_vector, top_k=top_k)
-                        
-                        if search_results and len(search_results) > 0:
-                            formatted_results = []
-                            for i, result in enumerate(search_results):
-                                # Extract chunk ID and content
-                                chunk_id = result.get('id') or result.get('chunk_id')
-                                
-                                # Get content from text_chunks using chunk_id
-                                content = None
-                                if chunk_id and chunk_id in self.rag.text_chunks:
-                                    content = self.rag.text_chunks[chunk_id]
-                                
-                                if content and not content.startswith("I'm sorry") and not content.startswith("I apologize"):
-                                    formatted_results.append({
-                                        "rank": i + 1,
-                                        "content": content,
-                                        "score": result.get('score', 1.0 - (i * 0.1)),
-                                        "metadata": result.get('metadata', {}),
-                                        "chunk_id": chunk_id
-                                    })
-                            
-                            if formatted_results:
-                                logger.info(f"Retrieved {len(formatted_results)} chunks from text_chunks")
-                                # Continue with metadata enhancement
-                            else:
-                                logger.warning("No valid chunks found from text_chunks, falling back to aquery")
-                                raise Exception("No valid chunks from text_chunks")
-                        else:
-                            logger.warning("No chunks returned from chunks_vdb, falling back to aquery")
-                            raise Exception("No chunks from chunks_vdb")
-                    else:
-                        logger.warning("chunks_vdb search not available, falling back to aquery")
-                        raise Exception("chunks_vdb search not available")
-                else:
-                    logger.warning("text_chunks not available, falling back to aquery")
-                    raise Exception("text_chunks not available")
-                    
-            except Exception as e:
-                logger.info(f"text_chunks method failed: {e}, falling back to aquery")
-                
-                # Fallback: Use LightRAG's aquery method with local mode for search
-                query_param = QueryParam(mode="local", top_k=top_k)
-                query_result = await self.rag.aquery(query, param=query_param)
-                
-                logger.info(f"Query result type: {type(query_result)}")
-                logger.info(f"Query result: {query_result}")
-                
-                # Debug: Log the structure of the first few results
-                if isinstance(query_result, list) and len(query_result) > 0:
-                    logger.info(f"First result structure: {query_result[0]}")
-                    if len(query_result) > 1:
-                        logger.info(f"Second result structure: {query_result[1]}")
-                elif isinstance(query_result, dict):
-                    logger.info(f"Query result keys: {list(query_result.keys())}")
-                
-                # Parse the query result to extract relevant content
-                formatted_results = []
-                
-                # Handle different response formats from LightRAG
-                if isinstance(query_result, str):
-                    # If it's a string response, create a single result
-                    # Filter out generated responses that don't contain actual content
-                    if not query_result.startswith("I'm sorry") and not query_result.startswith("I apologize"):
+            # Use LightRAG's aquery method with re-ranking
+            query_param = QueryParam(mode="hybrid", top_k=top_k, enable_rerank=enable_rerank)
+            query_result = await self.rag.aquery(query, param=query_param)
+            
+            logger.info(f"Query result type: {type(query_result)}")
+            
+            # Parse the query result to extract relevant content
+            formatted_results = []
+            
+            # Handle different response formats from LightRAG
+            if isinstance(query_result, str):
+                # If it's a string response, create a single result
+                if not query_result.startswith("I'm sorry") and not query_result.startswith("I apologize"):
+                    formatted_results.append({
+                        "rank": 1,
+                        "content": query_result,
+                        "score": 1.0,
+                        "metadata": {}
+                    })
+            elif isinstance(query_result, dict):
+                # If it's a dict, extract relevant fields
+                if "answer" in query_result:
+                    answer = query_result["answer"]
+                    if not answer.startswith("I'm sorry") and not answer.startswith("I apologize"):
                         formatted_results.append({
                             "rank": 1,
-                            "content": query_result,
+                            "content": answer,
                             "score": 1.0,
-                            "metadata": {}
+                            "metadata": query_result.get("metadata", {})
                         })
-                elif isinstance(query_result, dict):
-                    # If it's a dict, extract relevant fields
-                    if "answer" in query_result:
-                        answer = query_result["answer"]
-                        if not answer.startswith("I'm sorry") and not answer.startswith("I apologize"):
+                elif "content" in query_result:
+                    content = query_result["content"]
+                    if not content.startswith("I'm sorry") and not content.startswith("I apologize"):
+                        formatted_results.append({
+                            "rank": 1,
+                            "content": content,
+                            "score": query_result.get("score", 1.0),
+                            "metadata": query_result.get("metadata", {})
+                        })
+            elif isinstance(query_result, list):
+                # If it's a list, process each item
+                for i, item in enumerate(query_result):
+                    if isinstance(item, str):
+                        if not item.startswith("I'm sorry") and not item.startswith("I apologize"):
                             formatted_results.append({
-                                "rank": 1,
-                                "content": answer,
-                                "score": 1.0,
-                                "metadata": query_result.get("metadata", {})
+                                "rank": i + 1,
+                                "content": item,
+                                "score": 1.0 - (i * 0.1),  # Decreasing score
+                                "metadata": {}
                             })
-                    elif "content" in query_result:
-                        content = query_result["content"]
+                    elif isinstance(item, dict):
+                        content = item.get("content", str(item))
                         if not content.startswith("I'm sorry") and not content.startswith("I apologize"):
                             formatted_results.append({
-                                "rank": 1,
+                                "rank": i + 1,
                                 "content": content,
-                                "score": query_result.get("score", 1.0),
-                                "metadata": query_result.get("metadata", {})
+                                "score": item.get("score", 1.0 - (i * 0.1)),
+                                "metadata": item.get("metadata", {})
                             })
-                elif isinstance(query_result, list):
-                    # If it's a list, process each item
-                    for i, item in enumerate(query_result):
-                        if isinstance(item, str):
-                            if not item.startswith("I'm sorry") and not item.startswith("I apologize"):
-                                formatted_results.append({
-                                    "rank": i + 1,
-                                    "content": item,
-                                    "score": 1.0 - (i * 0.1),  # Decreasing score
-                                    "metadata": {}
-                                })
-                        elif isinstance(item, dict):
-                            content = item.get("content", str(item))
-                            if not content.startswith("I'm sorry") and not content.startswith("I apologize"):
-                                formatted_results.append({
-                                    "rank": i + 1,
-                                    "content": content,
-                                    "score": item.get("score", 1.0 - (i * 0.1)),
-                                    "metadata": item.get("metadata", {})
-                                })
             
             # Enhance with document metadata
             for i, result in enumerate(formatted_results):
@@ -419,22 +358,68 @@ class RAGStore:
             else:
                 # Use LightRAG's aquery method with naive mode for generation
                 logger.info("Using LightRAG aquery for answer generation...")
-                query_param = QueryParam(mode="naive")
+                query_param = QueryParam(mode="hybrid")
                 result = await self.rag.aquery(query, param=query_param)
                 
                 if isinstance(result, str):
-                    return result
+                    # Clean up the response to remove unknown_source references
+                    cleaned_result = self._clean_generation_response(result)
+                    return cleaned_result
                 elif isinstance(result, dict) and "answer" in result:
-                    return result["answer"]
+                    # Clean up the response to remove unknown_source references
+                    cleaned_answer = self._clean_generation_response(result["answer"])
+                    return cleaned_answer
                 else:
-                    # Fallback: use the result as is
-                    return str(result)
+                    # Fallback: use the result as is, but clean it
+                    cleaned_result = self._clean_generation_response(str(result))
+                    return cleaned_result
             
         except Exception as e:
             logger.error(f"Error during answer generation: {e}")
             import traceback
             logger.error(f"Traceback: {traceback.format_exc()}")
             return f"Sorry, I encountered an error while generating the answer: {str(e)}"
+    
+    def _clean_generation_response(self, response: str) -> str:
+        """Clean up generation response to remove unknown_source references"""
+        if not response:
+            return response
+        
+        # Remove the References section with unknown_source
+        lines = response.split('\n')
+        cleaned_lines = []
+        skip_references = False
+        
+        for line in lines:
+            # Check if we're entering a References section
+            if line.strip().lower().startswith('### references') or line.strip().lower().startswith('references'):
+                skip_references = True
+                continue
+            
+            # If we're in references section, check if it contains unknown_source
+            if skip_references:
+                if 'unknown_source' in line.lower():
+                    continue
+                elif line.strip() == '' or line.strip().startswith('#'):
+                    # End of references section
+                    skip_references = False
+                    if line.strip() != '':
+                        cleaned_lines.append(line)
+                else:
+                    # This might be a valid reference, keep it
+                    cleaned_lines.append(line)
+            else:
+                cleaned_lines.append(line)
+        
+        # Join the lines back together
+        cleaned_response = '\n'.join(cleaned_lines).strip()
+        
+        # Also remove any remaining unknown_source patterns
+        import re
+        cleaned_response = re.sub(r'\n\s*\[[^\]]*\]\s*unknown_source\s*\n?', '', cleaned_response, flags=re.IGNORECASE)
+        cleaned_response = re.sub(r'\n\s*###\s*References?\s*\n.*unknown_source.*', '', cleaned_response, flags=re.IGNORECASE | re.DOTALL)
+        
+        return cleaned_response
     
     def get_document_summary(self) -> Dict[str, Any]:
         """Get a summary of all ingested documents"""
@@ -518,9 +503,9 @@ Business Plan Text:
         logger.error(f"Error retrieving recommendations: {e}")
         return ["Unable to retrieve recommendations at this time."]
 
-async def search_documents(query: str, top_k: int = 5) -> List[Dict[str, Any]]:
+async def search_documents(query: str, top_k: int = 5, enable_rerank: bool = True) -> List[Dict[str, Any]]:
     """Search documents and return detailed results with metadata"""
-    return await rag_store.search(query, top_k=top_k)
+    return await rag_store.search(query, top_k=top_k, enable_rerank=enable_rerank)
 
 async def generate_answer(query: str) -> str:
     """Generate a comprehensive answer to the query"""

@@ -38,16 +38,25 @@ export interface AssessResponse {
 export interface SearchRequest {
   query: string;
   top_k?: number;
+  enable_rerank?: boolean;
+}
+
+export interface SearchResult {
+  rank: number;
+  content: string;
+  score: number;
+  metadata: any;
+  document_metadata?: {
+    document_id?: string;
+    document_name?: string;
+    document_type?: string;
+    source_file?: string;
+    [key: string]: any;
+  };
 }
 
 export interface SearchResponse {
-  results: Array<{
-    rank: number;
-    content: string;
-    score: number;
-    metadata: any;
-    document_metadata?: any;
-  }>;
+  results: SearchResult[];
   total_results: number;
 }
 

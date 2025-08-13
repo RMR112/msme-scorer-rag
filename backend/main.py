@@ -35,12 +35,20 @@ app.add_middleware(
 class SearchRequest(BaseModel):
     query: str
     top_k: Optional[int] = 5
+    enable_rerank: Optional[bool] = True
 
 class GenerateRequest(BaseModel):
     query: str
 
+class SearchResult(BaseModel):
+    rank: int
+    content: str
+    score: float
+    metadata: Dict[str, Any] = {}
+    document_metadata: Optional[Dict[str, Any]] = None
+
 class SearchResponse(BaseModel):
-    results: List[Dict[str, Any]]
+    results: List[SearchResult]
     total_results: int
 
 class GenerateResponse(BaseModel):
@@ -112,7 +120,7 @@ async def search_docs(request: SearchRequest):
         raise HTTPException(status_code=400, detail="Query cannot be empty")
     
     try:
-        results = await search_documents(request.query, top_k=request.top_k)
+        results = await search_documents(request.query, top_k=request.top_k, enable_rerank=request.enable_rerank)
         return SearchResponse(
             results=results,
             total_results=len(results)

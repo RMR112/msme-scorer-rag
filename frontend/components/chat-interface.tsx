@@ -67,28 +67,35 @@ export function ChatInterface() {
 
       const citations: Citation[] = searchResponse.results.map(
         (result, index) => {
-          // Extract document name from metadata
+          // Extract document name from metadata with fallbacks
           let docName = "MSME Policy Document";
+
+          // Try multiple sources for document name
           if (result.document_metadata?.document_name) {
             docName = result.document_metadata.document_name;
-            // Clean up the filename for display
-            if (docName.endsWith(".pdf")) {
-              docName = docName.replace(".pdf", "");
-            }
-            // Replace underscores with spaces and make it more readable
-            docName = docName.replace(/_/g, " ").replace(/\d{8}/, "").trim();
+          } else if (result.document_metadata?.source_file) {
+            docName = result.document_metadata.source_file;
+          } else if (result.document_metadata?.document_id) {
+            docName = result.document_metadata.document_id;
+          }
 
-            // Handle specific document names for better display
-            if (docName.toLowerCase().includes("sme intensive branches")) {
-              docName = "SME Intensive Branches";
-            } else if (docName.toLowerCase().includes("msme loan")) {
-              docName = "MSME Loan Guidelines";
-            } else if (
-              docName.toLowerCase().includes("msme_e-book") ||
-              docName.toLowerCase().includes("e-book")
-            ) {
-              docName = "MSME E-Book of Schemes";
-            }
+          // Clean up the filename for display
+          if (docName.endsWith(".pdf")) {
+            docName = docName.replace(".pdf", "");
+          }
+          // Replace underscores with spaces and make it more readable
+          docName = docName.replace(/_/g, " ").replace(/\d{8}/, "").trim();
+
+          // Handle specific document names for better display
+          if (docName.toLowerCase().includes("sme intensive branches")) {
+            docName = "SME Intensive Branches";
+          } else if (docName.toLowerCase().includes("msme loan")) {
+            docName = "MSME Loan Guidelines";
+          } else if (
+            docName.toLowerCase().includes("msme_e-book") ||
+            docName.toLowerCase().includes("e-book")
+          ) {
+            docName = "MSME E-Book of Schemes";
           }
 
           return {
@@ -109,12 +116,28 @@ export function ChatInterface() {
       };
 
       setMessages((prev) => [...prev, botMessage]);
-    } catch (error) {
+    } catch (error: any) {
       console.error("Chat error:", error);
+
+      let errorContent =
+        "I apologize, but I'm having trouble accessing the information right now. Please try again in a moment.";
+
+      // Handle validation errors
+      if (
+        error.response?.status === 400 &&
+        error.response?.data?.error === "Query validation failed"
+      ) {
+        const validationData = error.response.data;
+        errorContent = `${
+          validationData.reason
+        }\n\nHere are some suggested questions you can ask:\n\n${validationData.suggested_questions
+          ?.map((q: string, i: number) => `${i + 1}. ${q}`)
+          .join("\n")}`;
+      }
+
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
-        content:
-          "I apologize, but I'm having trouble accessing the information right now. Please try again in a moment.",
+        content: errorContent,
         sender: "bot",
         timestamp: new Date(),
       };

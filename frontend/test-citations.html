@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Citation Test</title>
+  </head>
+  <body>
+    <h1>Citation Test</h1>
+    <button onclick="testApi()">Test API</button>
+    <div id="results"></div>
+
+    <script>
+      async function testApi() {
+        try {
+          const response = await fetch("http://localhost:8000/api/search", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              query: "What are the eligibility criteria for MSME loans?",
+              top_k: 3,
+              enable_rerank: false,
+            }),
+          });
+
+          const data = await response.json();
+          console.log("API Response:", data);
+
+          const resultsDiv = document.getElementById("results");
+          resultsDiv.innerHTML =
+            "<h2>API Response:</h2><pre>" +
+            JSON.stringify(data, null, 2) +
+            "</pre>";
+
+          // Check each result
+          data.results.forEach((result, index) => {
+            console.log(`Result ${index + 1}:`, result);
+            console.log(
+              `Document metadata for result ${index + 1}:`,
+              result.document_metadata
+            );
+            console.log(
+              `Document name: ${result.document_metadata?.document_name}`
+            );
+            console.log(
+              `Document ID: ${result.document_metadata?.document_id}`
+            );
+            console.log(
+              `Source file: ${result.document_metadata?.source_file}`
+            );
+          });
+        } catch (error) {
+          console.error("Error:", error);
+          document.getElementById("results").innerHTML =
+            '<p style="color: red;">Error: ' + error.message + "</p>";
+        }
+      }
+    </script>
+  </body>
+</html>
