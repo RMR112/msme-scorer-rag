@@ -1,11 +1,15 @@
-import axios from 'axios';
+import axios from "axios";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const API_BASE_URL = "https://msme-scorer-rag-production.up.railway.app";
+
+// Debug: Log the API URL being used
+console.log("🔧 API_BASE_URL:", API_BASE_URL);
+console.log("🔧 NEXT_PUBLIC_API_URL env var:", process.env.NEXT_PUBLIC_API_URL);
 
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
 });
 
@@ -71,31 +75,31 @@ export interface GenerateResponse {
 export const apiClient = {
   // Assess loan application
   assess: async (data: AssessRequest): Promise<AssessResponse> => {
-    const response = await api.post('/api/assess', data);
+    const response = await api.post("/api/assess", data);
     return response.data;
   },
 
   // Search documents
   search: async (data: SearchRequest): Promise<SearchResponse> => {
-    const response = await api.post('/api/search', data);
+    const response = await api.post("/api/search", data);
     return response.data;
   },
 
   // Generate answer
   generate: async (data: GenerateRequest): Promise<GenerateResponse> => {
-    const response = await api.post('/api/generate', data);
+    const response = await api.post("/api/generate", data);
     return response.data;
   },
 
   // Health check
   health: async () => {
-    const response = await api.get('/api/health');
+    const response = await api.get("/api/health");
     return response.data;
   },
 
   // Get documents info
   getDocuments: async () => {
-    const response = await api.get('/api/documents');
+    const response = await api.get("/api/documents");
     return response.data;
   },
 };
