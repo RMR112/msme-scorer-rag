@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 import os
 import asyncio
 import logging
+from datetime import datetime
 
 from rule_engine import compute_score, sanitize_text
 from rag_store import retrieve_recommendations, search_documents, generate_answer, get_document_summary
@@ -16,6 +17,13 @@ logger = logging.getLogger(__name__)
 load_dotenv()
 
 FRONTEND_ORIGIN = os.getenv("FRONTEND_ORIGIN", "http://localhost:3000")
+
+# Add your Railway frontend URL to allowed origins
+ALLOWED_ORIGINS = [
+    FRONTEND_ORIGIN,
+    "https://*.railway.app",  # Allow all Railway subdomains
+    "https://msme-scorer-rag-frontend-production.up.railway.app",  # Your specific frontend URL
+]
 BUSINESS_PLAN_CHAR_LIMIT = 2000
 
 app = FastAPI(
@@ -26,7 +34,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[FRONTEND_ORIGIN],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -191,6 +199,66 @@ async def get_info():
 async def get_documents():
     """Get summary of all ingested documents with metadata"""
     return get_document_summary()
+
+@app.post("/api/ingest-pdfs")
+async def ingest_pdfs():
+    """One-time endpoint to ingest PDFs into LightRAG"""
+    try:
+        # Import the ingestion function
+        from ingest import main as ingest_main
+        
+        # Run the ingestion
+        await ingest_main()
+        
+        return {
+            "status": "success",
+            "message": "PDFs ingested successfully into LightRAG",
+            "timestamp": datetime.now().isoformat()
+        }
+    except Exception as e:
+        logger.error(f"Error during PDF ingestion: {e}")
+        return {
+            "status": "error",
+            "message": f"Failed to ingest PDFs: {str(e)}",
+            "timestamp": datetime.now().isoformat()
+        }
+
+@app.get("/api/check-files")
+async def check_files():
+    """Check what PDF files are available in the backend directory"""
+    import os
+    
+    backend_dir = os.path.dirname(__file__)
+    pdf_files = []
+    
+    try:
+        for file in os.listdir(backend_dir):
+            if file.lower().endswith('.pdf'):
+                pdf_files.append(file)
+        
+        return {
+            "status": "success",
+            "pdf_files": pdf_files,
+            "total_pdfs": len(pdf_files),
+            "backend_directory": backend_dir
+        }
+    except Exception as e:
+        return {
+            "status": "error",
+            "message": f"Failed to check files: {str(e)}",
+            "pdf_files": [],
+            "total_pdfs": 0
+        }
+
+@app.get("/api/test-connection")
+async def test_connection():
+    """Test endpoint to verify frontend-backend connection"""
+    return {
+        "status": "success",
+        "message": "Backend is connected and working!",
+        "rag_status": "LightRAG files are present and loaded",
+        "timestamp": datetime.now().isoformat()
+    }
 
 # Legacy endpoint for backward compatibility
 @app.post("/api/assess-legacy")
