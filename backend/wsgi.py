@@ -4,6 +4,9 @@ import sys
 # Add current directory to Python path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+# LightRAG imports should work with official package
+print("=== Starting MSME Loan Scorer Backend ===")
+
 try:
     from main import app
     print("✅ Successfully imported app from main.py")

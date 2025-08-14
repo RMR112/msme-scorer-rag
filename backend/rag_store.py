@@ -3,17 +3,18 @@ import asyncio
 import logging
 import json
 from typing import List, Dict, Any, Optional
-from lightrag import LightRAG
+# Official LightRAG imports
+from lightrag import LightRAG, QueryParam
 from lightrag.llm.openai import gpt_4o_mini_complete, openai_embed
 from lightrag.kg.shared_storage import initialize_pipeline_status
-from lightrag import QueryParam
+from lightrag.utils import logger, set_verbose_debug
 from rerank_func import simple_rerank_func
 
 # -------------------------
 # 🔧 Logging
 # -------------------------
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+# Use LightRAG's built-in logger
+set_verbose_debug(True)  # Enable verbose logging for debugging
 
 # -------------------------
 # 📁 Paths
