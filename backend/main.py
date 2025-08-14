@@ -6,6 +6,10 @@ from dotenv import load_dotenv
 import os
 import asyncio
 import logging
+
+# Import LightRAG utilities first to handle compatibility
+import lightrag_utils
+
 from rule_engine import compute_score, sanitize_text
 from rag_store import retrieve_recommendations, search_documents, generate_answer, get_document_summary
 
