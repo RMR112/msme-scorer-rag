@@ -21,8 +21,8 @@ FRONTEND_ORIGIN = os.getenv("FRONTEND_ORIGIN", "http://localhost:3000")
 # Add your Railway frontend URL to allowed origins
 ALLOWED_ORIGINS = [
     FRONTEND_ORIGIN,
-    "https://*.railway.app",  # Allow all Railway subdomains
-    "https://msme-scorer-rag-frontend-production.up.railway.app",  # Your specific frontend URL
+    "https://frontend-production-1e18.up.railway.app",  # Your specific frontend URL
+    "https://msme-scorer-rag-frontend-production.up.railway.app",  # Alternative frontend URL
 ]
 BUSINESS_PLAN_CHAR_LIMIT = 2000
 
@@ -258,6 +258,16 @@ async def test_connection():
         "message": "Backend is connected and working!",
         "rag_status": "LightRAG files are present and loaded",
         "timestamp": datetime.now().isoformat()
+    }
+
+@app.get("/api/debug-cors")
+async def debug_cors():
+    """Debug endpoint to check CORS configuration"""
+    return {
+        "status": "success",
+        "allowed_origins": ALLOWED_ORIGINS,
+        "frontend_origin": FRONTEND_ORIGIN,
+        "message": "CORS configuration loaded"
     }
 
 # Legacy endpoint for backward compatibility
